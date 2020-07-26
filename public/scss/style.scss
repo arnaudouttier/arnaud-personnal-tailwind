@@ -1,0 +1,45 @@
+@import "../base/base";
+@import "../theme/font";
+@import "../theme/color";
+
+@import "../layout/l_outer";
+@import "../layout/l_inner";
+
+
+//header
+@import "../layout/l_header";
+@import "../module/header-title";
+@import "../module/header-nav";
+
+//main
+@import "../layout/l_main";
+@import "../module/main-intro";
+
+//technologies
+@import "../layout/l_technologies";
+@import "../module/techno-title";
+@import "../module/techno-icons";
+	
+//compentences
+@import "../layout/l_competences";
+@import "../module/competences-title";
+@import "../module/competences-items";
+
+//contact
+@import "../layout/l_contact";
+@import "../module/contact-title";
+@import "../module/form";
+
+//footer
+@import "../layout/l_footer";
+@import "../module/footer-top-btn";
+@import "../module/social";
+
+
+
+
+
+
+
+
+

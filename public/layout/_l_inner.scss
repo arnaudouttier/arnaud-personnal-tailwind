@@ -1,0 +1,7 @@
+.inner {
+	transform: translateX(0);
+	transition: transform .5s cubic-bezier(.55,.07,1,.02);
+	&.open {
+		transform: translateX(100%);
+	}
+}

@@ -1,0 +1,55 @@
+@import "../theme/color";
+
+#about{
+
+	text-align: center;
+
+
+	.title{
+		margin: 10px 0 40px 0; 
+		font-weight: 400;
+		
+	}
+
+
+	.intro {
+		width: 100%;
+		line-height: 1.8;
+		text-align: justify;
+		margin: 0 0 40px 0; 
+
+	}
+
+	img{
+		border-radius: 4px;
+		opacity: 0.9;
+	}
+
+
+	.hidden-bloc{display: none;}
+}
+
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) {
+
+	#about{
+
+		.hidden-bloc{
+
+			padding: 12px 24px;
+			text-align: justify;
+			display: block;
+		}
+
+		img:hover{
+			opacity: 1;
+		}
+	}
+}
+
+
+
+
+
+

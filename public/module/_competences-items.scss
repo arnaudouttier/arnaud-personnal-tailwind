@@ -1,0 +1,79 @@
+@import "../theme/color";
+
+.competences_s {
+
+  em{
+    display: block;
+    margin-bottom: 15px;
+    letter-spacing: 3px;
+    font-style: normal;
+  }
+
+  .level-bg{
+    margin-bottom: 35px;
+    background: $grey-lite-color;
+    height: 35px;
+    overflow: hidden;
+
+    span{
+      height: 35px;
+      display: block;
+      background: $text-color;
+    }
+
+    .maitre{width: 100%;}
+    .maitrise{width: 75%;}
+    .apprenti{width: 50% ;}
+    .debutant{width: 25%;}
+    
+  }
+}
+
+// LEVEL
+.maitreLevel {width: 100% !important;}
+.maitriseLevel {width: 75% !important;}
+.apprentiLevel {width: 50% !important;}
+.debutantLevel {width: 25% !important;}
+
+
+//ANIMATION
+
+.animated {
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+.fadeInLeft {
+  -webkit-animation-name: fadeInLeft;
+  animation-name: fadeInLeft;
+}
+
+
+@-webkit-keyframes fadeInLeft {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(-100%, 0, 0);
+    transform: translate3d(-100%, 0, 0);
+  }100% {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+
+
+@keyframes fadeInLeft {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(-100%, 0, 0);
+    -ms-transform: translate3d(-100%, 0, 0);
+    transform: translate3d(-100%, 0, 0);
+  }100% {
+    opacity: 1;
+    -webkit-transform: none;
+    -ms-transform: none;
+    transform: none;
+  }
+}

@@ -1,7 +1,5 @@
-$(document).ready(function () {
+document.getElementClassNames(".nav-toggle").addEventListener("click", navBurger);
 
-       	// toggle navigation
-       	$('.nav-toggle').click(function() {
-       		$('.inner').toggleClass('open');
-       	}); 
-});
+function navBurger() {
+  document.getElementClassNames(".inner").classList.toggle("open");
+}

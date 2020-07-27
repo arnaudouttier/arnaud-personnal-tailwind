@@ -6,7 +6,7 @@
 		<header id="header">
 			<div class="container-fluid clearfix">
 				<div class="row">
-					<a class="languages-link" href="/index.php">Fr</a>
+					<a class="languages-link" href="..">Fr</a>
 					<i class="fa fa-bars nav-toggle" aria-hidden="true"></i>
 					<nav role="navigation">
 						<i class="fa fa-times nav-toggle" aria-hidden="true"></i>

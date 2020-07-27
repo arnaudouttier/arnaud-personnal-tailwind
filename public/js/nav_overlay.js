@@ -1,5 +1,5 @@
-document.getElementClassNames(".nav-toggle").addEventListener("click", navBurger);
+document.getElementsByClassName("nav-toggle").addEventListener("click", navBurger);
 
 function navBurger() {
-  document.getElementClassNames(".inner").classList.toggle("open");
+  document.getElementsByClassName("inner").classList.toggle("open");
 }

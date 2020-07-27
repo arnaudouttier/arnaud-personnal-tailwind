@@ -3,3 +3,4 @@ document.getElementsByClassName("nav-toggle").addEventListener("click", navBurge
 
 function navBurger() {
   document.getElementsByClassName("inner").classList.toggle("open");
+}

@@ -1,7 +1,6 @@
 $(document).ready(function () {
 
-
-  function maitreLevel (){
+ function maitreLevel (){
     $('span.maitre').each(function(){
     $('span.maitre').addClass('animated fadeInLeft maitreLevel');
   });

@@ -173,7 +173,8 @@ nav {
   #about .intro {
     width: 100%;
     line-height: 1.8;
-    text-align: justify;
+    text-align: justify; 
+  }
   #about img {
     border-radius: 4px;
     opacity: 0.9; }

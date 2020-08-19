@@ -145,7 +145,7 @@ nav {
     font-size: 25px;
     position: absolute;
     top: 5%;
-    right: 5%;
+    right: 2%;
     cursor: pointer;
     color: #fff
 }
@@ -179,7 +179,7 @@ nav {
 }
 
 #about {
-    padding-top: 35px;
+    padding-top: 100px;
     background-color: #fff
 }
 

@@ -1,0 +1,18 @@
+.header {
+    padding: 16px;
+}
+
+.header__title,
+.header__description {
+    padding: 16px 0;
+    text-align: center;
+}
+
+.header__title{
+    margin-top: 32px;
+}
+
+.header__description {
+    padding: 32px;
+    margin: 16px 0 50px 0 ;
+}

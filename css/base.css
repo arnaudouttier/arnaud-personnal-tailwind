@@ -86,11 +86,3 @@ body{
     color: var(--text-color);
 }
 
-/*section {
-opacity: 0;
-transition: opacity 1s;
-}
-
-section.visible { 
-opacity: 1;
-}*/

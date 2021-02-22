@@ -12,7 +12,16 @@
 }
 
 .header__description {
-	margin-top: 128px;
+	margin-top: 118px;
 	padding: 32px;
 	text-align: center;
 }
+
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+
+    #header{
+        height: 20px;
+    }
+   }

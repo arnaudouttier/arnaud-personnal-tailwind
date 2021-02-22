@@ -2,6 +2,15 @@
     padding: 0 16px;
 }
 
+section {
+    opacity: 0;
+    transition: opacity 3s;
+}
+
+section.visible {
+    opacity: 1;
+}
+
 .card {
     text-align: center;
     margin-bottom: 100px ;

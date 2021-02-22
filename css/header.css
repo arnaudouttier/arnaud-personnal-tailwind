@@ -1,5 +1,8 @@
-.header {
+#header {
+	height: 100vh;
     padding: 16px;
+    display: flex;
+    flex-direction: column;
 }
 
 .header__title,
@@ -13,6 +16,9 @@
 }
 
 .header__description {
+	flex: 2;
+	display: flex;
+	align-items: center;
     padding: 32px;
     margin: 16px 0 50px 0 ;
 }

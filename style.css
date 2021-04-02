@@ -13,11 +13,11 @@ p {
 }
 
 .page {
-    height: 100vh;
-Width:100vw;
+    max-height: 100vh;
+max-Width:100vw;
     display: flex;
     flex-direction: column;
-    
+    Justify-content : centre;
 }
 
 .line {

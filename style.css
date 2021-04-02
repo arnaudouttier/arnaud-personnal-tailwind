@@ -17,7 +17,7 @@ p {
 max-Width:100vw;
     display: flex;
     flex-direction: column;
-    Justify-content : centre;
+    justify-content : center;
 }
 
 .line {

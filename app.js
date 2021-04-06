@@ -1,10 +1,6 @@
 var app = new Vue({
     el: '#app ',
     data: {
-        sent: false,
-        form: {
-            email: ""
-        },
         valid: ' ',
         formMessage: '',
         validInput: '',
@@ -21,18 +17,6 @@ var app = new Vue({
                 this.valid = true;
                 this.formMessage = ' Email added '
             }
-        },
-        onSubmit(e) {
-            validEmail();
-            e.preventDefault();
-            this.$axios
-                .post(
-                    "https://arnaudouttier.github.io/ao/mail.php",
-                    querystring.stringify(this.form)
-                )
-                .then(res => {
-                    this.sent = true;
-                });
         }
     }
 })

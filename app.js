@@ -1,38 +1,33 @@
 var app = new Vue({
     el: '#app ',
     data: {
-        sent: false,
-        form: {
-            email: ""
-        },
-        valid: ' ',
-        formMessage: '',
+        errors: [],
+        email: null,
+        valid: true,
         validInput: '',
         errorInput: 'errorInput',
-        formErrorMessage: 'form-error-message ',
-        formValidMessage: 'form-valid-message'
     },
     methods: {
-        validEmail() {
-            if (!/^([A-Za-z0-9_\-.])+@([A-Za-z0-9_\-.])+\.([A-Za-z]{2,4})$/.test(this.form.email)) {
+        checkForm(e) {
+            this.errors = [];
+
+            if (!this.email) {
+                this.errors.push('Email required.');
                 this.valid = false;
-                return this.formMessage = ' Please provide a valid email '
-            } else {
-                this.valid = true;
-                this.formMessage = ' Email added '
+            } else if (!this.validEmail(this.email)) {
+                this.errors.push('Valid email required.');
+                this.valid = false;
             }
-        },
-        onSubmit(e) {
-            validEmail();
+
+            if (!this.errors.length) {
+                return true;
+            }
+
             e.preventDefault();
-            this.$axios
-                .post(
-                    "https://arnaudouttier.github.io/ao/mail.php",
-                    querystring.stringify(this.form)
-                )
-                .then(res => {
-                    this.sent = true;
-                });
+        },
+        validEmail(email) {
+            var re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+            return re.test(email);
         }
     }
 })

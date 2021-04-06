@@ -11,13 +11,14 @@
     --primary-color: #2f4550;
     --secondary-color: #586f7c;
     --dark-grayish-red: hsl(0, 6%, 24%);
+    --red: rgb(255, 95, 95);
 }
 
 
 /* Class */
 
 .errorInput {
-    border: 2px solid rgb(255, 95, 95)!important;
+    border: 2px solid var(--red)!important;
 }
 
 .form-error-message {

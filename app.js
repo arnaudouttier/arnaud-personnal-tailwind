@@ -10,7 +10,7 @@ var app = new Vue({
     },
     methods: {
         validEmail() {
-            if (!/^([A-Za-z0-9_\-.])+@([A-Za-z0-9_\-.])+\.([A-Za-z]{2,4})$/.test(this.form.email)) {
+            if (!/^([A-Za-z0-9_\-.])+@([A-Za-z0-9_\-.])+\.([A-Za-z]{2,4})$/.test(this.email)) {
                 this.valid = false;
                 return this.formMessage = ' Please provide a valid email '
             } else {

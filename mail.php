@@ -1,6 +1,6 @@
 <?php
 
-$emailName = "Undefined name";
+$emailName = "name@gf.fr";
 
 if(isset($_POST['name'])){
     $name = $_POST['name'];

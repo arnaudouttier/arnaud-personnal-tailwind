@@ -23,6 +23,7 @@ var app = new Vue({
             }
         },
         onSubmit(e) {
+            validEmail();
             e.preventDefault();
             this.$axios
                 .post(

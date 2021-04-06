@@ -3,7 +3,7 @@ var app = new Vue({
     data: {
         sent: false,
         form: {
-            emailName: ""
+            email: ""
         },
         valid: ' ',
         formMessage: '',
@@ -14,7 +14,7 @@ var app = new Vue({
     },
     methods: {
         validEmail() {
-            if (!/^([A-Za-z0-9_\-.])+@([A-Za-z0-9_\-.])+\.([A-Za-z]{2,4})$/.test(this.form.emailName)) {
+            if (!/^([A-Za-z0-9_\-.])+@([A-Za-z0-9_\-.])+\.([A-Za-z]{2,4})$/.test(this.form.email)) {
                 this.valid = false;
                 return this.formMessage = ' Please provide a valid email '
             } else {
@@ -23,7 +23,6 @@ var app = new Vue({
             }
         },
         onSubmit(e) {
-            validEmail();
             e.preventDefault();
             this.$axios
                 .post(

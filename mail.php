@@ -1,13 +1,11 @@
 <?php
 
-$emailName = "name@gf.fr";
-
-if(isset($_POST['name'])){
-    $name = $_POST['name'];
+if(!empty($_POST['email']);
+    $email = $_POST['email'];
 }
 
-$message = "<p>Hi!</p>";
-$message .= "<p>Wazaaaaa $emailName</p>";
+$message = "<p>Bonjour!</p>";
+$message .= "<p>$email a essayé de vous contacter depuis votre sire arnaudouttier.github.io/ao</p>";
 
 $to_email = 'arnoutti@gmail.com';
 $headers[] = 'MIME-Version: 1.0';
@@ -17,3 +15,4 @@ $headers[] = 'From: Biloo <noreply@ydomain.com>';
 mail($to_email, $message, implode("\r\n", $headers));
 
 ?>
+

@@ -1,6 +1,7 @@
 var app = new Vue({
     el: '#app ',
     data: {
+        email: '',
         valid: ' ',
         formMessage: '',
         validInput: '',

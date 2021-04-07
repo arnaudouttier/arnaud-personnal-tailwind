@@ -17,6 +17,8 @@ var app = new Vue({
             } else if (!this.validEmail(this.email)) {
                 this.errors.push('Valid email required.');
                 this.valid = false;
+            } else {
+                this.errors.push('Email Added');
             }
 
             if (!this.errors.length) {

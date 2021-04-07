@@ -11,11 +11,7 @@ var app = new Vue({
         checkForm(e) {
             this.errors = [];
 
-            if (!this.email) {
-                this.errors.push('Email requis.');
-                this.valid = false;
-            } 
-            if (!this.validEmail(this.email)) {
+            if (!this.email ||!this.validEmail(this.email)) {
                 this.errors.push('Email valide requis.');
                 this.valid = false;
             } 

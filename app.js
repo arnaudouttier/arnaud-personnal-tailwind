@@ -12,13 +12,13 @@ var app = new Vue({
             this.errors = [];
 
             if (!this.email) {
-                this.errors.push('Email required.');
+                this.errors.push('Email requis.');
                 this.valid = false;
             } else if (!this.validEmail(this.email)) {
-                this.errors.push('Valid email required.');
+                this.errors.push('Email Valide requis.');
                 this.valid = false;
             } else {
-                this.errors.push('Email Added');
+                this.errors.push('Email ajouté');
             }
 
             if (!this.errors.length) {

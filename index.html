@@ -28,7 +28,7 @@
             <div class="main-footer">
                 <form class="form" @submit="checkForm" action="#" novalidate="true">
                     <label for="emailAddress">Email</label>
-                    <input type="email" id="email" placeholder="Email Address" v-model="email" :class="[valid ? validInput : errorInput]">
+                    <input type="email" id="email" placeholder="Email Adresse Email" v-model="email" :class="[valid ? validInput : errorInput]">
                     <img v-show="!valid" class="email-error-icon" src="images/icon-error.svg" alt="email error icon ">
                     <button type="submit" class="form-submit" name="submit-button"></button>
                     <ul>

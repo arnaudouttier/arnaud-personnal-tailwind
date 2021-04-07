@@ -14,11 +14,14 @@ var app = new Vue({
             if (!this.email) {
                 this.errors.push('Email requis.');
                 this.valid = false;
-            } else if (!this.validEmail(this.email)) {
+            } 
+            if (!this.validEmail(this.email)) {
                 this.errors.push('Email valide requis.');
                 this.valid = false;
-            } else {
+            } 
+            else {
                 this.errors.push('Email ajouté');
+                this.valid = true;
             }
 
             if (!this.errors.length) {

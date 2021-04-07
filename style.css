@@ -12,6 +12,7 @@
     --secondary-color: #586f7c;
     --dark-grayish-red: hsl(0, 6%, 24%);
     --red: rgb(255, 95, 95);
+    --green: rgb(106, 160, 101);
 }
 
 
@@ -19,6 +20,10 @@
 
 .errorInput {
     border: 2px solid var(--red)!important;
+}
+
+.validInput {
+    border: 2px solid var(--green)!important;
 }
 
 .form-error-message {

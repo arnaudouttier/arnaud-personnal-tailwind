@@ -4,7 +4,7 @@ var app = new Vue({
         errors: [],
         email: null,
         valid: true,
-        validInput: '',
+        validInput: 'validInput',
         errorInput: 'errorInput',
     },
     methods: {
@@ -12,13 +12,13 @@ var app = new Vue({
             this.errors = [];
 
             if (!this.email) {
-                this.errors.push('Email requis.');
+                this.errors.push('Email required.');
                 this.valid = false;
             } else if (!this.validEmail(this.email)) {
-                this.errors.push('Email valide requis.');
+                this.errors.push('Valid email required.');
                 this.valid = false;
             } else {
-                this.errors.push('Email ajouté');
+                this.errors.push('Email Added');
             }
 
             if (!this.errors.length) {

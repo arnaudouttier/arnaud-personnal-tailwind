@@ -8,13 +8,28 @@ var app = new Vue({
         email: ''
     },
     methods: {
-        checkForm(e) {
+        sendEmail(e) {
             this.errors = [];
 
             if (!this.email || !this.validEmail(this.email)) {
-                this.errors.push('Email requis.');
+                this.errors.push('Email valide requis.');
                 this.valid = false;
             } else {
+
+                try {
+                    emailjs.sendForm('service_yk00zem', 'template_i8imi9p', e.target,
+                        'user_9QPd6cAymGUHuxXUoaA86', {
+                            reply_to: this.email,
+                            from_name: "arnaudouttier-github",
+                            from_email: this.email,
+                        })
+
+                } catch (error) {
+                    console.log({ error })
+                }
+                // Reset form field
+                this.email = ''
+
                 this.errors.push('Email ajouté');
                 this.valid = true;
             }
@@ -22,27 +37,14 @@ var app = new Vue({
             if (!this.errors.length) {
                 return true;
             }
-
             e.preventDefault();
 
         },
         validEmail(email) {
             var re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
             return re.test(email);
-        },
-        sendEmail(e) {
-            try {
-                emailjs.sendForm('Yservice_yk00zem', 'template_i8imi9p', e.target,
-                    'user_9QPd6cAymGUHuxXUoaA86', {
-                        email: this.email
-                    })
-
-            } catch (error) {
-                console.log({ error })
-            }
-            // Reset form field
-            this.email = ''
         }
 
     }
+
 })

@@ -81,11 +81,11 @@ body {
     font-weight: var(--font-bolder-xl);
 }
 
-.form {
+#form {
     position: relative;
 }
 
-.form label {
+#form label {
     display: none;
 }
 
@@ -127,7 +127,7 @@ input[type="email"] {
     transform: translateX( 5px);
 }
 
-.form ul {
+#form ul {
     padding-left: 10px;
     text-align: left;
     list-style: none;

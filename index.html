@@ -33,13 +33,13 @@
             </div>
 
             <div class="main-footer">
-                <form class="form" @submit="checkForm" novalidate="true">
-                    <label>Email</label>
-                    <input type="email" v-model="email" name="email" placeholder="Adresse Emaill" :class="[valid ? validInput : errorInput]">
-                    <img v-show="!valid" class="email-error-icon" src="images/icon-error.svg" alt="email error icon ">
-                    <button type="submit" class="form-submit" name="submit-button" v-model="valid"></button>
+                <form id="form" @submit="sendEmail" novalidate="true">
+                    <label for="from_email">Email</label>
+                    <input type="email" v-model="email" name="email " placeholder="Adresse Emaill " :class="[valid ? validInput : errorInput] ">
+                    <img v-show="!valid " class="email-error-icon " src="images/icon-error.svg " alt="email error icon ">
+                    <button type="submit " class="form-submit " name="submit"></button>
                     <ul>
-                        <li v-for="error in errors">{{ error }} </li>
+                        <li v-for="error in errors ">{{ error }} </li>
                     </ul>
                 </form>
             </div>
@@ -50,8 +50,10 @@
     <!-- .page -->
 
 
-    <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
-    <script src="app.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2 "></script>
+    <script src="app.js ">
+        import emailjs from 'emailjs-com';
+    </script>
 
 </body>
 

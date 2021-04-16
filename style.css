@@ -76,7 +76,7 @@ body {
 }
 
 .main-header span {
-    color: var(--dark-grayish-red);
+    color: var(--dark-blue);
     display: block;
     font-weight: var(--font-bolder-xl);
 }
@@ -123,7 +123,7 @@ input[type="email"] {
 
 .form-submit:hover {
     background-image: url("images/icon-arrow.svg");
-    background-color: var(--dark-grayish-red);
+    background-color: var(--dark-blue);
     transform: translateX( 5px);
 }
 

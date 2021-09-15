@@ -1,26 +1,56 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div class="site" role="scrollSections" >
+    <Header/>
+    <main class="site-content" >
+      <Biography/>
+      <Expertise/>
+      <Contact/>
+    </main>
+    <Footer/>
+  </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import locomotiveScroll from "locomotive-scroll"
+import Header from './components/Header.vue'
+import Biography from './components/Biography.vue'
+import Expertise from './components/Expertise.vue'
+import Contact from './components/Contact.vue'
+import Footer from './components/Footer.vue'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    Header,
+    Biography,
+    Expertise,
+    Contact,
+    Footer
+  },
+  mounted() {
+    const _self = this;
+    this.$nextTick(function() {
+      _self.initLocoScroll();
+    });
+  },
+  methods: {
+    initLocoScroll() {
+      const _self = this;
+      this.scroll = new locomotiveScroll({
+        el: _self.$refs['scrollSections'],
+        smooth: true,
+        smoothMobile: true,
+        getDirection: true
+      });
+    }
   }
 }
 </script>
 
 <style lang="scss">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+  @import './src/assets/scss/main.scss';
+
+  #app {
+    font-family: $primary-font;
+  }
 </style>

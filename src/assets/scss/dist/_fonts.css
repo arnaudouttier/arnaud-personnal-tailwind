@@ -1,0 +1,12 @@
+@font-face {
+  font-family: "Neue Montreal";
+  src: local("Neue Montreal"), url("~@/assets/fonts/NeueMontreal-Medium.woff") format("woff"), url("~@/assets/fonts/NeueMontreal-Medium.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Futura PT";
+  src: local("Futura PT"), url("~@/assets/fonts/FuturaPTMedium.otf") format("otf"), url("~@/assets/fonts/FuturaPTLight.otf") format("otf");
+  font-weight: 300;
+  font-style: normal;
+}

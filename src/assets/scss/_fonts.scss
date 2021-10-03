@@ -11,13 +11,22 @@
 }
 
 @font-face {
-    font-family: 'Futura PT';
-    src: local("Futura PT"), 
-        url('~@/assets/fonts/FuturaPTMedium.otf') format('otf'),
-        url('~@/assets/fonts/FuturaPTLight.otf') format('otf');
+    font-family: 'FuturaPT';
+    src: local("FuturaPT"), 
+        url('~@/assets/fonts/FuturaPT-Medium.woff') format('woff'),
+        url('~@/assets/fonts/FuturaPT-Light.woff') format('woff');
     font-weight: 300;
     font-style: normal;
 }
 
+@font-face {
+    font-family: 'FuturaPT-light';
+    src: local("FuturaPT"), 
+        url('~@/assets/fonts/FuturaPT-Light.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+
 $font-neue-montreal: 'Neue Montreal';
-$font-futura-pt: 'Futura PT';
+$font-futura-pt: "FuturaPT", Helvetica, Arial, sans-serif;
+$font-futura-pt-light: "FuturaPT-light", Helvetica, Arial, sans-serif;

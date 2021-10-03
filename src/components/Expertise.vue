@@ -1,5 +1,5 @@
 <template>
-    <div class="expertise">
+    <section class="expertise">
       <h3>Expertise</h3>
       <div class="expertise-list">
           <ul>
@@ -14,7 +14,7 @@
             <li>html</li>
           </ul>
       </div>
-    </div> 
+    </section> 
 </template>
 
 <script>
@@ -25,9 +25,10 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
-  ul{
-    list-style-type: none;
+  .expertise{
+    margin-bottom: 128px;
   }
+
   li{
     &:before{
       content: "–";

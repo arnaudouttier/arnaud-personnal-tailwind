@@ -49,8 +49,11 @@ export default {
 
 <style lang="scss">
   @import './src/assets/scss/main.scss';
+  .site{
+    padding: 0 16px;
+  }
 
-  #app {
-    font-family: $primary-font;
+  header, .site-content{
+    margin-bottom: 128px;
   }
 </style>

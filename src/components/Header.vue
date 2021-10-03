@@ -1,9 +1,8 @@
 <template>
   <header ref="scrollSections" id="header" class="site-header" data-scroll-section >
       <Nav/>
-      <div class="site-title" data-scroll data-scroll-direction="horizontal" data-scroll-speed="-8" data-scroll-position="top" data-scroll-target="#header" data-scroll-repeat>
-        <h2>Hello Im Front End Developer</h2>
-        <h3>Arnaud Outtier</h3>
+      <div class="site-intro" data-scroll data-scroll-direction="horizontal" data-scroll-speed="-8" data-scroll-position="top" data-scroll-target="#header" data-scroll-repeat>
+        <h2>Ce site est mon site personnel. Je m'appelle Arnaud Outtier - Développeur Web Junior - Support Informatique - Curieux et passionné des technologies du web</h2>
       </div>
   </header>
 </template>
@@ -44,4 +43,12 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
+  .navigation{
+    margin-bottom: 128px;
+  }
+
+  .navigation{
+    text-align: right;
+  }
+
 </style>

@@ -1,10 +1,10 @@
 <template>
-    <div class="biography">
-        <h3>Biography</h3>
+    <section class="biography">
+        <h4>Biography</h4>
         <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla excepturi doloremque ipsam aperiam voluptas laboriosam repellat eum voluptate neque accusantium ex perspiciatis recusandae, possimus id, molestias est aut sapiente adipisci.
         </p>
-    </div>
+    </section>
 </template>
 
 <script>
@@ -17,7 +17,7 @@ export default {
 <style scoped lang="scss">
     @import '~@/assets/scss/main.scss';
 
-    p{
-        font-family: $secondary-font;
+    .biography{
+        margin-bottom: 128px;
     }
 </style>

@@ -1,7 +1,7 @@
 <template>
-    <div class="contact" >
-      <h5>To get in touch , write Arnaud.outtier@protonmail.com</h5>
-    </div>
+    <section class="contact" >
+      <h5>To get in touch , write arnaud.outtier@protonmail.com</h5>
+    </section>
 </template>
 
 <script>

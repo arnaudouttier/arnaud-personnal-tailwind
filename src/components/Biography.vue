@@ -19,5 +19,13 @@ export default {
 
     .biography{
         margin-bottom: 128px;
+    
+        &:before{
+            content: "";
+            border-top: 2px solid $secondary-color;
+            width: 50px;
+            display: block;
+            margin-bottom: 6rem;
+        }
     }
 </style>

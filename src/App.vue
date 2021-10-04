@@ -1,5 +1,5 @@
 <template>
-  <div class="site" role="scrollSections" >
+  <div class="site" data-scroll-container>
     <Header/>
     <main class="site-content" >
       <Biography/>
@@ -11,7 +11,6 @@
 </template>
 
 <script>
-import locomotiveScroll from "locomotive-scroll"
 import Header from './components/Header.vue'
 import Biography from './components/Biography.vue'
 import Expertise from './components/Expertise.vue'
@@ -27,24 +26,9 @@ export default {
     Contact,
     Footer
   },
-  mounted() {
-    const _self = this;
-    this.$nextTick(function() {
-      _self.initLocoScroll();
-    });
-  },
-  methods: {
-    initLocoScroll() {
-      const _self = this;
-      this.scroll = new locomotiveScroll({
-        el: _self.$refs['scrollSections'],
-        smooth: true,
-        smoothMobile: true,
-        getDirection: true
-      });
-    }
-  }
+ 
 }
+
 </script>
 
 <style lang="scss">

@@ -1,5 +1,5 @@
 <template>
-  <div class="site" data-scroll-container>
+  <div class="site">
     <Header/>
     <main class="site-content" >
       <Biography/>
@@ -26,6 +26,51 @@ export default {
     Contact,
     Footer
   },
+  mounted (){
+    this.scrollGeneral()
+  },
+  methods: {
+    scrollGeneral () {
+      const scrollElements = document.querySelectorAll(".js-scroll");
+
+const elementInView = (el, dividend = 1) => {
+  const elementTop = el.getBoundingClientRect().top;
+
+  return (
+    elementTop <=
+    (window.innerHeight || document.documentElement.clientHeight) / dividend
+  );
+};
+
+const elementOutofView = (el) => {
+  const elementTop = el.getBoundingClientRect().top;
+
+  return (
+    elementTop > (window.innerHeight || document.documentElement.clientHeight)
+  );
+};
+
+const displayScrollElement = (element) => {
+  element.classList.add("scrolled");
+};
+
+const hideScrollElement = (element) => {
+  element.classList.remove("scrolled");
+};
+
+const handleScrollAnimation = () => {
+  scrollElements.forEach((el) => {
+    if (elementInView(el, 1.25)) {
+      displayScrollElement(el);
+    } else if (elementOutofView(el)) {
+      hideScrollElement(el)
+    }
+  })
+}
+window.addEventListener("scroll", () => { 
+  handleScrollAnimation();
+});
+  }}
  
 }
 
@@ -39,5 +84,14 @@ export default {
 
   header, .site-content{
     margin-bottom: 128px;
+  }
+
+  .js-scroll{
+    opacity: 0;
+    transition: opacity 500ms ;
+  }
+
+  .js-scroll.scrolled{
+    opacity: 1;
   }
 </style>

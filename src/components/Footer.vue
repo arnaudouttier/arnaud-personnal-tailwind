@@ -1,6 +1,6 @@
 <template>
     <footer id="footer" class="site-footer" >
-      <div class="social-navigation" >
+      <div class="social-navigation  js-scroll fade-from-left" >
         <a href="">
           <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	              viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
@@ -56,7 +56,7 @@
           <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="100" height="100" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><path d="M12.17 1.272a.732.732 0 0 0-.718.732v13.914a.732.732 0 0 0 .732.732a.732.732 0 0 0 .732-.732V2.004a.732.732 0 0 0-.745-.732zM23.246 5.44a.734.734 0 0 0-.277.063l-6.282 2.804a.733.733 0 0 0 0 1.336l6.282 2.813a.738.738 0 0 0 .3.065a.732.732 0 0 0 .297-1.4l-4.786-2.145l4.786-2.137a.734.734 0 0 0 .37-.966a.734.734 0 0 0-.69-.433zm-22.5 5.032a.732.732 0 0 0-.722.915c1.736 6.677 7.775 11.341 14.683 11.341a.732.732 0 0 0 0-1.464A13.706 13.706 0 0 1 1.44 11.02a.732.732 0 0 0-.694-.547z" fill="#000"/></svg>
         </a>
       </div>
-      <div class="copyright">
+      <div class="copyright  js-scroll fade-from-right ">
           <p>{{currentDateTime()}} AO</p>
       </div>
     </footer>
@@ -104,6 +104,19 @@ export default {
   svg{
     width: 18px;
     height: 18px;
+  }
+
+    .scrolled.fade-from-right{
+    animation: fade-from-bottom 2s ease;
+  }
+
+  @keyframes fade-from-right  {
+    0%{
+      transform: translateX(+100px);
+    }
+        100%{
+      transform: translateX(0px);
+    }
   }
 
 </style>

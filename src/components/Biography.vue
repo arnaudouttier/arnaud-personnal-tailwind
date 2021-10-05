@@ -1,5 +1,5 @@
 <template>
-    <section class="biography">
+    <section class="biography js-scroll fade-in">
         <h4>Biography</h4>
         <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla excepturi doloremque ipsam aperiam voluptas laboriosam repellat eum voluptate neque accusantium ex perspiciatis recusandae, possimus id, molestias est aut sapiente adipisci.
@@ -28,4 +28,18 @@ export default {
             margin-bottom: 6rem;
         }
     }
+
+    .scrolled.fade-in{
+        animation: fade-in 2s ease-in-out;
+    }
+
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 </style>

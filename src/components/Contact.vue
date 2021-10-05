@@ -1,5 +1,5 @@
 <template>
-    <section class="contact" >
+    <section class="contact js-scroll fade-from-bottom" >
       <h5>To get in touch , write arnaud.outtier@protonmail.com</h5>
     </section>
 </template>
@@ -22,5 +22,18 @@ export default {
             display: block;
             margin-bottom: 6rem;
         }
+  }
+
+  .scrolled.fade-from-bottom{
+    animation: fade-from-bottom 2s ease;
+  }
+
+  @keyframes fade-from-bottom  {
+    0%{
+      transform: translateY(+100px);
+    }
+        100%{
+      transform: translateY(0px);
+    }
   }
 </style>

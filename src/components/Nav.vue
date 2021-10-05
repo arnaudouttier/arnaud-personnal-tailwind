@@ -1,7 +1,7 @@
 <template>
-  <div data-scroll-section>
-    <nav class="navigation" data-scroll data-scroll-speed="-8" data-scroll-position="top" data-scroll-target="#header" data-scroll-repeat >
-      <ul data-scroll data-scroll-direction="horizontal" data-scroll-speed="-2" data-scroll-position="top" data-scroll-target="#header">
+  <div>
+    <nav class="navigation">
+      <ul>
         <li>
           <a href="">Biography</a>
         </li>
@@ -17,32 +17,37 @@
       </ul>
     </nav>
   </div>
-  
 </template>
 
 <script>
-  import LocomotiveScroll from 'locomotive-scroll';
 
   export default {
     name: 'Nav',
-    mounted() {
-      const scroll = new LocomotiveScroll({
-      el: document.querySelector('[data-scroll-section]'),
-      smooth: true,
-      smoothMobile: true,
-      getDirection: true
-      });
-    }
-  }
+    data () {
+      return{
+      }
+    },
+    mounted(){
+        this.fadeIn() //method1 will execute at pageload
+  },
+  methods:{
+        fadeIn (){
+          const navigation = document.querySelector('.navigation')
+        }
+     },
+   }
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped lang="scss">
+<style lang="scss">
   @import '~@/assets/scss/variables.scss';
 
   .navigation{
     margin-bottom: 128px;
     text-align:right;
+    animation-name: slideInFromTop ;
+    animation-duration: .7s;
+    animation-timing-function: ease-in;
 
     a{
       position: relative;
@@ -65,26 +70,17 @@
       }
     }
   }
-  /* Keyframes */
-@keyframes fill {
-  0%{
-    border-bottom: 1px solid red;
-    width: 0%;
-  }
-  25%{
-    border-bottom: 1px solid red;
-    width: 100%;
-  }
-  75%{
-    right: 0;
-    border-bottom: 1px solid rgb(33, 173, 20);
-    width: 0%;
-  }
-  100%{
-    border-bottom: 1px solid rgb(33, 173, 20);
-    width: 100%;
-  }
+  @keyframes slideInFromTop {
+    0% {
+      transform: translateY(-100%);
+      opacity: 0;
+    }
+    50% {
+      transform: translateY(6px);
+      opacity: 1;
+    }
+    100% {
+      transform: translateY(0%);
+    }
 }
-
-
 </style>

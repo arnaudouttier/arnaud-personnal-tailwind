@@ -1,5 +1,5 @@
 <template>
-    <section class="expertise">
+    <section class="expertise js-scroll fade-from-left ">
       <h3>Expertise</h3>
       <div class="expertise-list">
           <ul>
@@ -43,6 +43,21 @@ export default {
     &:before{
       content: "–";
       margin-right: 0.8rem;
+    }
+  }
+
+  .scrolled.fade-from-left{
+    animation: fade-from-left 2s ease;
+  }
+
+  @keyframes fade-from-left  {
+    0%{
+      transform: translateX(-100%);
+      opacity: 0;
+    }
+        100%{
+      transform: translateX(0%);
+      opacity: 1;
     }
   }
 

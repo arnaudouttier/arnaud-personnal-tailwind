@@ -1,40 +1,23 @@
 <template>
-  <div>
-    <nav class="navigation">
-      <ul>
-        <li>
-          <a href="">Biography</a>
-        </li>
-        <li>
-          <a href="">Technology</a>
-        </li>
-        <li>
-          <a href="">Expertise</a>
-        </li>
-        <li>
-          <a href="">Contact</a>
-        </li>
-      </ul>
-    </nav>
-  </div>
+  <nav class="navigation">
+    <ul>
+      <li>
+        <a href="">Biography</a>
+      </li>
+      <li>
+        <a href="">Expertise</a>
+      </li>
+      <li>
+        <a href="">Contact</a>
+      </li>
+    </ul>
+  </nav>
 </template>
 
 <script>
 
   export default {
-    name: 'Nav',
-    data () {
-      return{
-      }
-    },
-    mounted(){
-        this.fadeIn() //method1 will execute at pageload
-  },
-  methods:{
-        fadeIn (){
-          const navigation = document.querySelector('.navigation')
-        }
-     },
+    name: 'Nav'
    }
 </script>
 
@@ -43,7 +26,6 @@
   @import '~@/assets/scss/variables.scss';
 
   .navigation{
-    margin-bottom: 128px;
     text-align:right;
     animation-name: slideInFromTop ;
     animation-duration: .7s;
@@ -70,9 +52,20 @@
       }
     }
   }
+
+    @media (min-width: 992px) {
+    .site-intro{
+      width: 70%;
+
+      h2{
+        font-size: 3rem;
+      }
+    }
+  }
+  
   @keyframes slideInFromTop {
     0% {
-      transform: translateY(-100%);
+      transform: translateY(-10px);
       opacity: 0;
     }
     50% {
@@ -80,7 +73,7 @@
       opacity: 1;
     }
     100% {
-      transform: translateY(0%);
+      transform: translateY(0px);
     }
-}
+  }
 </style>

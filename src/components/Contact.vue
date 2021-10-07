@@ -1,6 +1,7 @@
 <template>
     <section class="contact js-scroll fade-from-bottom" >
-      <h5>To get in touch , write arnaud.outtier@protonmail.com</h5>
+      <h5>To get in touch , write</h5>
+      <a href="">arnaud.outtier@protonmail.com</a>
     </section>
 </template>
 
@@ -15,13 +16,33 @@ export default {
   @import '~@/assets/scss/variables.scss';
 
   .contact{
+    font-family: $secondary-font;
+    
     &:before{
             content: "";
             border-top: 2px solid $secondary-color;
             width: 50px;
             display: block;
             margin-bottom: 6rem;
-        }
+    }
+    h5{
+      display: inline;
+      margin-right: 8px;
+    }
+    a{
+      color: #080808;
+      position: relative;
+
+      &:after{
+        content: "";
+        border-bottom: 2px solid $secondary-color;
+        position: absolute;
+        left: 0;
+        bottom: -4px;
+        width: 274px;
+      }
+
+    }
   }
 
   .scrolled.fade-from-bottom{
@@ -30,7 +51,7 @@ export default {
 
   @keyframes fade-from-bottom  {
     0%{
-      transform: translateY(+100px);
+      transform: translateY(+30px);
     }
         100%{
       transform: translateY(0px);

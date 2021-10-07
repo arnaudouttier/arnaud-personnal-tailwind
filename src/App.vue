@@ -33,57 +33,64 @@ export default {
     scrollGeneral () {
       const scrollElements = document.querySelectorAll(".js-scroll");
 
-const elementInView = (el, dividend = 1) => {
-  const elementTop = el.getBoundingClientRect().top;
+      const elementInView = (el, dividend = 1) => {
+        const elementTop = el.getBoundingClientRect().top;
 
-  return (
-    elementTop <=
-    (window.innerHeight || document.documentElement.clientHeight) / dividend
-  );
-};
+        return (
+          elementTop <=
+          (window.innerHeight || document.documentElement.clientHeight) / dividend
+        );
+      };
 
-const elementOutofView = (el) => {
-  const elementTop = el.getBoundingClientRect().top;
+      const elementOutofView = (el) => {
+        const elementTop = el.getBoundingClientRect().top;
 
-  return (
-    elementTop > (window.innerHeight || document.documentElement.clientHeight)
-  );
-};
+        return (
+          elementTop > (window.innerHeight || document.documentElement.clientHeight)
+        );
+      };
 
-const displayScrollElement = (element) => {
-  element.classList.add("scrolled");
-};
+      const displayScrollElement = (element) => {
+        element.classList.add("scrolled");
+      };
 
-const hideScrollElement = (element) => {
-  element.classList.remove("scrolled");
-};
+      const hideScrollElement = (element) => {
+        element.classList.remove("scrolled");
+      };
 
-const handleScrollAnimation = () => {
-  scrollElements.forEach((el) => {
-    if (elementInView(el, 1.25)) {
-      displayScrollElement(el);
-    } else if (elementOutofView(el)) {
-      hideScrollElement(el)
+      const handleScrollAnimation = () => {
+        scrollElements.forEach((el) => {
+          if (elementInView(el, 1)) {
+            displayScrollElement(el);
+          } else if (elementOutofView(el)) {
+            hideScrollElement(el)
+          }
+        })
+      }
+      window.addEventListener("scroll", () => { 
+        handleScrollAnimation();
+      });
+        }}
     }
-  })
-}
-window.addEventListener("scroll", () => { 
-  handleScrollAnimation();
-});
-  }}
- 
-}
 
 </script>
 
 <style lang="scss">
   @import './src/assets/scss/main.scss';
   .site{
+    max-width: 992px;
+    margin: 0 auto;
     padding: 0 16px;
   }
 
   header, .site-content{
-    margin-bottom: 128px;
+    margin-bottom: 110px;
+  }
+
+  @media (min-width: 992px) {
+    header{
+      margin-bottom: 0;
+    }
   }
 
   .js-scroll{

@@ -91,7 +91,6 @@ export default {
       font-size: 1.4rem;
     }
   }
-
   .social-navigation{
     display: flex;
     align-items: center;
@@ -100,22 +99,31 @@ export default {
       margin-right: 16px;
     }
   }
-
   svg{
     width: 18px;
     height: 18px;
   }
-
-    .scrolled.fade-from-right{
-    animation: fade-from-bottom 2s ease;
+  .scrolled.fade-from-right{
+    animation: fade-from-right .8s ease-in-out;
+  }
+    .scrolled.fade-from-left{
+    animation: fade-from-left .8s ease-in-out;
   }
 
   @keyframes fade-from-right  {
     0%{
-      transform: translateX(+100px);
+      transform: translateX(10px);
     }
-        100%{
+    100%{
       transform: translateX(0px);
+    }
+  }
+  @keyframes fade-from-left  {
+    0%{
+      transform: translateX(-10px);
+    }
+    100%{
+      transform: translateX(0);
     }
   }
 

@@ -19,5 +19,19 @@ export default {
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped lang="scss">
+<style lang="scss">
+  // Large devices (desktops, 992px and up)
+  .navigation{
+    margin-bottom: 10.2rem;
+  }
+  
+  @media (min-width: 992px) {
+    header{
+      height: 90vh;
+    }
+    .navigation{
+      margin-bottom: 24rem;
+    }
+  }
+
 </style>

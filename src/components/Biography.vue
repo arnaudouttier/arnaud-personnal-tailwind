@@ -4,6 +4,8 @@
         <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla excepturi doloremque ipsam aperiam voluptas laboriosam repellat eum voluptate neque accusantium ex perspiciatis recusandae, possimus id, molestias est aut sapiente adipisci.
         </p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque voluptas repellat, sit sunt neque natus iure mollitia culpa quis dolore, non, dignissimos magnam eligendi. Rerum quod tenetur, vitae consequuntur, temporibus in placeat maiores, voluptatibus voluptate quos adipisci. Rerum, nulla debitis?</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione a qui sapiente hic quam temporibus facere cumque aut minima esse, odio consequuntur et nobis non ut impedit cupiditate praesentium recusandae.</p>
     </section>
 </template>
 
@@ -18,7 +20,7 @@ export default {
     @import '~@/assets/scss/main.scss';
 
     .biography{
-        margin-bottom: 128px;
+        margin-bottom: 110px;
     
         &:before{
             content: "";

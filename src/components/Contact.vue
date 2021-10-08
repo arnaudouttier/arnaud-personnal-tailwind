@@ -32,6 +32,7 @@ export default {
     a{
       color: #080808;
       position: relative;
+      font-size: 1.8rem;
 
       &:after{
         content: "";
@@ -39,7 +40,7 @@ export default {
         position: absolute;
         left: 0;
         bottom: -4px;
-        width: 274px;
+        right: 0;
       }
 
     }

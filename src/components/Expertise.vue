@@ -1,6 +1,10 @@
 <template>
     <section class="expertise js-scroll fade-from-left ">
       <h3>Expertise</h3>
+      <div class="expertise-intro">
+        <p>Two decades of hands-on experience and hundreds of millions in spend have yielded a diverse skillset that touches on most every function. This is a partial list.</p>
+      </div>
+      <button>Notion</button>
       <div class="expertise-list">
           <ul>
             <li>html</li>
@@ -58,6 +62,23 @@ export default {
         100%{
       transform: translateX(0px);
       opacity: 1;
+    }
+  }
+
+  @media (min-width: 992px) {
+
+    .expertise{
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      column-gap: 30px;
+    
+      h3, .expertise-intro, button{
+        grid-column: 1/2;
+      }
+    }
+    .expertise-list{
+      grid-column: 2/3;
+      grid-row: 3/5;
     }
   }
 

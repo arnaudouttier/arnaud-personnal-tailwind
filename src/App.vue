@@ -54,17 +54,18 @@ export default {
         element.classList.add("scrolled");
       };
 
-      const hideScrollElement = (element) => {
-        element.classList.remove("scrolled");
-      };
+      // const hideScrollElement = (element) => {
+      //   element.classList.remove("scrolled");
+      // };
 
       const handleScrollAnimation = () => {
         scrollElements.forEach((el) => {
           if (elementInView(el, 1)) {
             displayScrollElement(el);
-          } else if (elementOutofView(el)) {
-            hideScrollElement(el)
           }
+          // else if (elementOutofView(el)) {
+          //   hideScrollElement(el)
+          // }
         })
       }
       window.addEventListener("scroll", () => { 

@@ -61,6 +61,16 @@ h1, h2, h3, h4, h5, h6 {
   color: #080808;
 }
 
+h1 {
+  font-weight: 500;
+  letter-spacing: -0.15rem;
+}
+
+h2, h3, h4, h5, h6 {
+  text-transform: uppercase;
+  letter-spacing: 0.3rem;
+}
+
 p {
   font-size: 2rem;
 }

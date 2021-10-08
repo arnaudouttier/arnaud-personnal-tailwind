@@ -2,7 +2,7 @@
   <header ref="scrollSections" id="header" class="site-header">
       <Nav/>
       <div class="site-intro">
-        <h2>Ce site est mon site personnel. Je m'appelle Arnaud Outtier - Développeur Web Junior - Support Informatique - Curieux et passionné des technologies du web</h2>
+        <h1>Ce site est mon site personnel. Je m'appelle Arnaud Outtier - Développeur Web Junior - Support Informatique - Curieux et passionné des technologies du web</h1>
       </div>
   </header>
 </template>

@@ -1,13 +1,13 @@
 <template>
-    <section class="biography js-scroll fade-in">
-      <h4>Biography</h4>
-      <div class="biography-content">
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci nesciunt alias quia, doloribus, at nobis fugit velit repudiandae maxime similique ea doloremque distinctio! Odit exercitationem blanditiis quae saepe ullam ducimus officia excepturi accusantium. Saepe sed veritatis id atque unde, similique iure odio at magnam, alias cupiditate fuga aliquam. Corrupti earum dolorem quas labore similique saepe eligendi eum minus maxime molestias ipsam, cumque eius aliquam at dicta velit sapiente ipsum suscipit.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus ipsum exercitationem nobis magnam similique eveniet? At rerum dicta quo. A nemo quod sit harum placeat laborum repellendus quas aliquid natus.</p>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque voluptas repellat, sit sunt neque natus iure mollitia culpa quis dolore, non, dignissimos magnam eligendi. Rerum quod tenetur, vitae consequuntur, temporibus in placeat maiores, voluptatibus voluptate quos adipisci. Rerum, nulla debitis?</p>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione a qui sapiente hic quam temporibus facere cumque aut minima esse, odio consequuntur et nobis non ut impedit cupiditate praesentium recusandae.</p>
-      </div>
-    </section>
+  <section class="biography js-scroll fade-in">
+    <div class="biography-header" >
+      <h2>Biography</h2>
+      <p>A life's work of embracing both the creative and the quantitative, developing thriving online businesses and enviable brands.</p>
+    </div>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus ipsum exercitationem nobis magnam similique eveniet? At rerum dicta quo. A nemo quod sit harum placeat laborum repellendus quas aliquid natus.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque voluptas repellat, sit sunt neque natus iure mollitia culpa quis dolore, non, dignissimos magnam eligendi. Rerum quod tenetur, vitae consequuntur, temporibus in placeat maiores, voluptatibus voluptate quos adipisci. Rerum, nulla debitis?</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione a qui sapiente hic quam temporibus facere cumque aut minima esse, odio consequuntur et nobis non ut impedit cupiditate praesentium recusandae.</p>
+  </section>
 </template>
 
 <script>
@@ -22,6 +22,7 @@ export default {
 
     .biography{
         margin-bottom: 110px;
+        text-align: justify;
     
         &:before{
             content: "";
@@ -30,6 +31,15 @@ export default {
             display: block;
             margin-bottom: 6rem;
         }
+    }
+
+    .biography-header{
+
+      p{
+        font-size: 1.4rem;
+        font-weight: 700;
+        margin: 64px 0;
+      }
     }
     
     .scrolled.fade-in{
@@ -46,10 +56,20 @@ export default {
     }
 
      @media (min-width: 992px) {
-        .biography-content{
+        .biography{
           display: grid;
           grid-template-columns: 1fr 1fr;
           column-gap: 30px;
         }
-     }
+        
+        .biography-header{
+          grid-column: 1/2;
+          width: 300px;
+        
+          p{
+            margin:32px 0;
+          }
+        }
+      }
+      
 </style>

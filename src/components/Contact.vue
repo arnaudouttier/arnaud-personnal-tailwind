@@ -1,6 +1,6 @@
 <template>
     <section class="contact js-scroll fade-from-bottom" >
-      <h5>To get in touch , write</h5>
+      <p>To get in touch , write</p>
       <a href="">arnaud.outtier@protonmail.com</a>
     </section>
 </template>
@@ -17,6 +17,7 @@ export default {
 
   .contact{
     font-family: $secondary-font;
+    color: #080808;
     
     &:before{
             content: "";
@@ -25,14 +26,12 @@ export default {
             display: block;
             margin-bottom: 6rem;
     }
-    h5{
+    p{
       display: inline;
       margin-right: 8px;
     }
-    a{
-      color: #080808;
+    a{    
       position: relative;
-      font-size: 1.8rem;
 
       &:after{
         content: "";

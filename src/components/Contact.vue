@@ -28,7 +28,7 @@ export default {
   }
   p {
     display: inline;
-    margin-right: 8px;
+    margin-right: 6px;
   }
   a {
     position: relative;

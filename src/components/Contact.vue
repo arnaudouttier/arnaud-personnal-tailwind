@@ -1,60 +1,59 @@
 <template>
-    <section class="contact js-scroll fade-from-bottom" >
-      <p>To get in touch , write</p>
-      <a href="">arnaud.outtier@protonmail.com</a>
-    </section>
+  <section class="contact js-scroll fade-from-bottom">
+    <p>To get in touch , write</p>
+    <a href="">arnaud.outtier@protonmail.com</a>
+  </section>
 </template>
 
 <script>
 export default {
-  name: 'Contact'
-}
+  name: "Contact",
+};
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
-  @import '~@/assets/scss/variables.scss';
+@import "~@/assets/scss/variables.scss";
 
-  .contact{
-    font-family: $secondary-font;
-    color: #080808;
-    
-    &:before{
-            content: "";
-            border-top: 2px solid $secondary-color;
-            width: 50px;
-            display: block;
-            margin-bottom: 6rem;
-    }
-    p{
-      display: inline;
-      margin-right: 8px;
-    }
-    a{    
-      position: relative;
+.contact {
+  font-family: $secondary-font;
+  color: #080808;
 
-      &:after{
-        content: "";
-        border-bottom: 2px solid $secondary-color;
-        position: absolute;
-        left: 0;
-        bottom: -4px;
-        right: 0;
-      }
+  &:before {
+    content: "";
+    border-top: 2px solid $secondary-color;
+    width: 50px;
+    display: block;
+    margin-bottom: 6rem;
+  }
+  p {
+    display: inline;
+    margin-right: 8px;
+  }
+  a {
+    position: relative;
 
+    &:after {
+      content: "";
+      border-bottom: 2px solid $secondary-color;
+      position: absolute;
+      left: 0;
+      bottom: -4px;
+      right: 0;
     }
   }
+}
 
-  .scrolled.fade-from-bottom{
-    animation: fade-from-bottom 2s ease;
-  }
+.scrolled.fade-from-bottom {
+  animation: fade-from-bottom 2s ease;
+}
 
-  @keyframes fade-from-bottom  {
-    0%{
-      transform: translateY(+30px);
-    }
-        100%{
-      transform: translateY(0px);
-    }
+@keyframes fade-from-bottom {
+  0% {
+    transform: translateY(+30px);
   }
+  100% {
+    transform: translateY(0px);
+  }
+}
 </style>

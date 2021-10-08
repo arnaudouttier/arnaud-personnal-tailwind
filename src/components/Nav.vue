@@ -15,65 +15,62 @@
 </template>
 
 <script>
-
-  export default {
-    name: 'Nav'
-   }
+export default {
+  name: "Nav",
+};
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="scss">
-  @import '~@/assets/scss/variables.scss';
+@import "~@/assets/scss/variables.scss";
 
-  .navigation{
-    text-align:right;
-    animation-name: slideInFromTop ;
-    animation-duration: .7s;
-    animation-timing-function: ease-in;
+.navigation {
+  text-align: right;
+  animation: slideInFromTop 2s ease forwards;
 
-    a{
-      position: relative;
-      
-      &:after{
-        position: absolute;
-        content: "";
-        bottom: -2px;
-        left: 0;
-        width: 100%;
-        height: 1px;
-        background-color: $secondary-color;
-        transform-origin: right;
-        transform: scaleX(0);
-        transition: transform 0.3s ease-in-out;
-      }
-      &:hover:after{
-        transform-origin: left;
-        transform: scaleX(1);
-      }
+  a {
+    position: relative;
+
+    &:after {
+      position: absolute;
+      content: "";
+      bottom: -2px;
+      left: 0;
+      width: 100%;
+      height: 1px;
+      background-color: $secondary-color;
+      transform-origin: right;
+      transform: scaleX(0);
+      transition: transform 0.3s ease-in-out;
+    }
+    &:hover:after {
+      transform-origin: left;
+      transform: scaleX(1);
     }
   }
+}
 
-    @media (min-width: 992px) {
-    .site-intro{
-      width: 70%;
+@media (min-width: 992px) {
+  .site-intro {
+    width: 70%;
 
-      h2{
-        font-size: 3rem;
-      }
+    h2 {
+      font-size: 3rem;
     }
   }
-  
-  @keyframes slideInFromTop {
-    0% {
-      transform: translateY(-10px);
-      opacity: 0;
-    }
-    50% {
-      transform: translateY(6px);
-      opacity: 1;
-    }
-    100% {
-      transform: translateY(0px);
-    }
+}
+
+@keyframes slideInFromTop {
+  0% {
+    transform: translateY(-10px);
+    opacity: 0;
   }
+  50% {
+    transform: translateY(4px);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
 </style>

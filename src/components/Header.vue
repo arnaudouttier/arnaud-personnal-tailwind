@@ -4,7 +4,7 @@
     <div class="site-intro">
       <h1>
         Ce site est mon site personnel. Je m'appelle Arnaud Outtier -
-        Développeur Web Junior - Support Informatique - Curieux et passionné des
+        Développeur Web Junior - Support Informatique - Curieux et passionné par les
         technologies du web
       </h1>
     </div>

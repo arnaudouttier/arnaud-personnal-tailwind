@@ -2,13 +2,13 @@
   <nav class="navigation">
     <ul>
       <li>
-        <a href="">Biography</a>
+        <a href="#biography">Biography</a>
       </li>
       <li>
-        <a href="">Expertise</a>
+        <a href="#expertise">Expertise</a>
       </li>
       <li>
-        <a href="">Contact</a>
+        <a href="#contact">Contact</a>
       </li>
     </ul>
   </nav>

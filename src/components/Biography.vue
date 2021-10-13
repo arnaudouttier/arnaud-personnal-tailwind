@@ -1,5 +1,5 @@
 <template>
-  <section class="biography js-scroll fade-in">
+  <section id="biography" class="biography js-scroll fade-in">
     <div class="biography-header">
       <h2>Biography</h2>
       <p>

@@ -4,7 +4,8 @@
 
 // 1rem = 10px
 html {
-    font-size: 62.5%; 
+    font-size: 62.5%;
+    scroll-behavior: smooth;
 }
 
 body{
@@ -42,8 +43,9 @@ p{
 
 ul {
     list-style: none;
-    line-height: 2.6rem;
+    line-height: 3rem;
     padding: 0;
+    white-space: nowrap;
 }
 
 a{

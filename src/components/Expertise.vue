@@ -1,5 +1,5 @@
 <template>
-  <section class="expertise js-scroll fade-from-left">
+  <section id="expertise" class="expertise js-scroll fade-from-left">
     <div class="expertise-header">
       <h2>Expertise</h2>
       <p>
@@ -8,7 +8,7 @@
         This is a partial list.
       </p>
     </div>
-    <a href="#">
+    <a href="https://congruous-potassium-ce0.notion.site/Resume-4a6d8379539b4c90b69b924135f02583" target="blank">
       <button class="button">
         résumé
         <svg
@@ -29,10 +29,9 @@
         <li>Brand Development & Advertising</li>
         <li>Direct-Response Marketing</li>
         <li>Search Marketing: SEO & PPC</li>
-        <li>Digital Video & TV, including Super Bowl</li>
         <li>Streaming & Radio</li>
         <li>Out-of-Home</li>
-        <li>Influencer Marketing: Podcast & YouTube</li>
+        <li>Influencer Marketing</li>
         <li>Email Marketing, Design & Dev</li>
         <li>Social Media (Paid & Organic)</li>
 
@@ -40,10 +39,10 @@
         <li>Advertising Creative (All Mediums)</li>
         <li>Identity Design</li>
         <li>Conversion Rate Optimization</li>
-        <li>Copywriting (Ad, Web, & Product)</li>
-        <li>Media Planning & Buying (up to $100MM)</li>
+        <li>Copywriting</li>
+        <li>Media Planning </li>
         <li>Content Strategy & Execution</li>
-        <li>Business Development: Platform & Revshare</li>
+        <li>Business Development:</li>
         <li>Creative Sponsorships & New Media</li>
       </ul>
     </div>

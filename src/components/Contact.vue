@@ -1,7 +1,6 @@
 <template>
-  <section class="contact js-scroll fade-from-bottom">
-    <p>To get in touch , write</p>
-    <a href="">arnaud.outtier@protonmail.com</a>
+  <section id="contact" class="contact js-scroll fade-from-bottom">
+    <p>To get in touch , write <span>arnaud.outtier@protonmail.com</span></p>
   </section>
 </template>
 
@@ -28,9 +27,8 @@ export default {
   }
   p {
     display: inline;
-    margin-right: 6px;
   }
-  a {
+  span {
     position: relative;
 
     &:after {

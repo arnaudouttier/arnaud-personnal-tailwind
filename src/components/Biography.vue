@@ -3,8 +3,7 @@
     <div class="biography-header">
       <h2>Biography</h2>
       <p>
-        A life's work of embracing both the creative and the quantitative,
-        developing thriving online businesses and enviable brands.
+     Cette introduction sera l'unique contenu de ma biographie , le reste sera du texte aléatoire faute de matière nécessaire à la rédaction.
       </p>
     </div>
     <p>

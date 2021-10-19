@@ -50,16 +50,6 @@ export default {
   }
 }
 
-@media (min-width: 992px) {
-  .site-intro {
-    width: 70%;
-
-    h2 {
-      font-size: 3rem;
-    }
-  }
-}
-
 @keyframes slideInFromTop {
   0% {
     transform: translateY(-10px);

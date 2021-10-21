@@ -12,9 +12,11 @@
           Ce site est mon site personnel. Je m'appelle Arnaud Outtier -
           Développeur Web Junior - Support Informatique - Curieux et passionné
           par les technologies du web
+         
         </span>
       </h1>
     </div>
+    <p>{{windowWith}}</p>
   </header>
 </template>
 
@@ -26,6 +28,11 @@ export default {
   name: "Header",
   components: {
     Nav,
+  },
+  data() {
+    return {
+      windowWith: window.innerWidth,
+    };
   },
   computed: {
     fadeInJs() {
@@ -48,6 +55,9 @@ export default {
     },
   },
   mounted() {
+    window.onresize = () => {
+      this.windowWidth = window.innerWidth;
+    };
     this.fadeInJs;
   },
 };
@@ -97,7 +107,7 @@ export default {
     opacity: 1;
   }
 
-  .site-intro{
+  .site-intro {
     width: 70%;
   }
 

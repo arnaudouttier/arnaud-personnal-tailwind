@@ -1,6 +1,9 @@
 <template>
   <section id="contact" class="contact js-scroll fade-from-bottom">
-    <p>To get in touch , write <span>arnaud.outtier@protonmail.com</span></p>
+    <p>
+      Vous avez une demande , n'hésitez pas à m'écrire
+      <span>arnaud.outtier@protonmail.com</span>
+    </p>
   </section>
 </template>
 

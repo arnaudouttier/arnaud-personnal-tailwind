@@ -1,22 +1,15 @@
 <template>
   <header id="header" class="site-header">
-    <div class="header-top">
-      <div class="site-logo">
-        <h1>[/\.]</h1>
-      </div>
-      <Nav />
-    </div>
+    <Nav />
     <div class="site-intro">
       <h1 class="ml1">
         <span class="letters">
           Ce site est mon site personnel. Je m'appelle Arnaud Outtier -
           Développeur Web Junior - Support Informatique - Curieux et passionné
           par les technologies du web
-         
         </span>
       </h1>
     </div>
-    <p>{{windowWith}}</p>
   </header>
 </template>
 
@@ -28,11 +21,6 @@ export default {
   name: "Header",
   components: {
     Nav,
-  },
-  data() {
-    return {
-      windowWith: window.innerWidth,
-    };
   },
   computed: {
     fadeInJs() {
@@ -53,36 +41,25 @@ export default {
         delay: (el, i) => 30 * (i + 1),
       });
     },
+    winWidth() {
+      let windowWidth = window.innerWidth;
+      if (windowWidth >= 992) {
+        this.fadeInJs;
+      }
+    },
   },
   mounted() {
-    window.onresize = () => {
-      this.windowWidth = window.innerWidth;
-    };
-    this.fadeInJs;
+    this.winWidth;
   },
 };
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="scss">
 @import "~@/assets/scss/variables.scss";
 
-.header-top {
-  margin-bottom: 14rem;
-  display: flex;
-  justify-content: space-between;
-
-  h1 {
-    font-size: 4rem;
-    letter-spacing: 1px;
-    color: $primary-color;
-    margin-top: 12px;
-  }
-}
-
-.site-logo {
+.site-intro{
   opacity: 0;
-  transition: opacity 0.5s ease-in-out;
+  animation: fadeInRight .9s ease .3s forwards;
 }
 
 .ml1 {
@@ -99,20 +76,23 @@ export default {
     height: 90vh;
   }
 
-  .header-top {
-    margin-bottom: 20rem;
-  }
-
-  .site-logo {
-    opacity: 1;
-  }
-
   .site-intro {
-    width: 70%;
+    width: 80%;
   }
 
   .ml1 {
     font-size: 3.3rem;
+  }
+}
+
+@keyframes fadeInRight {
+  0%{
+    opacity: 0;
+    transform: translateX(20%);
+  }
+  100%{
+    opacity: 1;
+    transform: translateX(0%);
   }
 }
 </style>

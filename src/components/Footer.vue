@@ -1,7 +1,7 @@
 <template>
   <footer id="footer" class="site-footer">
     <div class="social-navigation js-scroll fade-from-left">
-      <a href="">
+      <a href="https://github.com/arnaudouttier">
         <svg
           version="1.1"
           id="Capa_1"
@@ -45,7 +45,9 @@
           <g></g>
         </svg>
       </a>
-      <a href="">
+      <a
+        href="https://congruous-potassium-ce0.notion.site/Resume-4a6d8379539b4c90b69b924135f02583"
+      >
         <svg
           fill="#000000"
           xmlns="http://www.w3.org/2000/svg"
@@ -58,7 +60,7 @@
           />
         </svg>
       </a>
-      <a href="">
+      <a href="https://www.frontendmentor.io/profile/arnaudouttier">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           xmlns:xlink="http://www.w3.org/1999/xlink"

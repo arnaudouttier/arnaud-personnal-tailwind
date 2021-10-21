@@ -1,9 +1,10 @@
 <template>
   <section id="biography" class="biography js-scroll fade-in">
     <div class="biography-header">
-      <h2>Biography</h2>
+      <h2>Biographie</h2>
       <p>
-     Cette introduction sera l'unique contenu de ma biographie , le reste sera du texte aléatoire faute de matière nécessaire à la rédaction.
+        Cette introduction sera l'unique contenu de ma biographie , le reste
+        sera du texte aléatoire faute de matière nécessaire à la rédaction.
       </p>
     </div>
     <p>

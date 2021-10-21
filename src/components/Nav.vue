@@ -2,7 +2,7 @@
   <nav class="navigation">
     <ul>
       <li>
-        <a href="#biography">Biography</a>
+        <a href="#biography">Biographie</a>
       </li>
       <li>
         <a href="#expertise">Expertise</a>
@@ -27,6 +27,7 @@ export default {
 .navigation {
   text-align: right;
   animation: slideInFromTop 2s ease forwards;
+  margin-bottom: 15rem;
 
   a {
     position: relative;
@@ -47,6 +48,12 @@ export default {
       transform-origin: left;
       transform: scaleX(1);
     }
+  }
+}
+
+@media (min-width: 992px) {
+  .navigation {
+    margin-bottom: 20rem;
   }
 }
 

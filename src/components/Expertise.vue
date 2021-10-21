@@ -3,12 +3,16 @@
     <div class="expertise-header">
       <h2>Expertise</h2>
       <p>
-        Two decades of hands-on experience and hundreds of millions in spend
-        have yielded a diverse skillset that touches on most every function.
-        This is a partial list.
+        Titulaire d'une licence en informatique et d'un diplome dans le support
+        informatique, je me suis spécialisé dans le développement Front-end. Je
+        vous présente quelques compétences que j'ai developpé au fil des années.
+        Ceci est une liste non exhaustive.
       </p>
     </div>
-    <a href="https://congruous-potassium-ce0.notion.site/Resume-4a6d8379539b4c90b69b924135f02583" target="blank">
+    <a
+      href="https://congruous-potassium-ce0.notion.site/Resume-4a6d8379539b4c90b69b924135f02583"
+      target="blank"
+    >
       <button class="button">
         résumé
         <svg
@@ -26,24 +30,25 @@
     </a>
     <div class="expertise-list">
       <ul>
-        <li>Brand Development & Advertising</li>
-        <li>Direct-Response Marketing</li>
-        <li>Search Marketing: SEO & PPC</li>
-        <li>Streaming & Radio</li>
-        <li>Out-of-Home</li>
-        <li>Influencer Marketing</li>
-        <li>Email Marketing, Design & Dev</li>
-        <li>Social Media (Paid & Organic)</li>
+        <li>Création de sites internet</li>
+        <li>Gestion de sites internet</li>
+        <li>Wordpress</li>
+        <li>Intégration Html Css</li>
+        <li>Refonte de sites internet</li>
+        <li>UX/UI</li>
+        <li>Optimisation de sites</li>
+        <li>Maintenance de sites internet</li>
 
-        <li>Website Design & Development</li>
-        <li>Advertising Creative (All Mediums)</li>
-        <li>Identity Design</li>
-        <li>Conversion Rate Optimization</li>
-        <li>Copywriting</li>
-        <li>Media Planning </li>
-        <li>Content Strategy & Execution</li>
-        <li>Business Development:</li>
-        <li>Creative Sponsorships & New Media</li>
+        <li>Rédation de contenu web</li>
+        <li>Support informatique</li>
+        <li>Administration réseau</li>
+        <li>Javascript</li>
+        <li>VueJs</li>
+        <li>Php</li>
+        <li>BDD / Mysql</li>
+        <li>Multimédias</li>
+        <li>Figma / Photoshop</li>
+        <li>Création de template</li>
       </ul>
     </div>
   </section>
@@ -100,9 +105,21 @@ li {
   font-weight: 600;
   font-size: 1.15rem;
   margin: 64px 0;
+  transition: background-color 0.4s, color 0s, fill 0.5s;
+  transition-timing-function: ease-in-out;
 
   svg {
     margin-left: 12px;
+  }
+
+  &:hover {
+    background-color: $secondary-color;
+    color: #fff;
+    border: 0;
+
+    svg {
+      fill: #fff;
+    }
   }
 }
 

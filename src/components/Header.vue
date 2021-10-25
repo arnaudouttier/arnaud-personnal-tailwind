@@ -22,10 +22,15 @@ export default {
   components: {
     Nav,
   },
-  computed: {
+  data() {
+    return {
+      letterClass: "letter-class",
+    };
+  },
+  methods: {
     fadeInJs() {
       // Wrap every letter in a span
-      var textWrapper = document.querySelector(".ml1 .letters");
+      let textWrapper = document.querySelector(".ml1 .letters");
       textWrapper.innerHTML = textWrapper.textContent.replace(
         /\S/g,
         "<span class='letter'>$&</span>"
@@ -38,18 +43,18 @@ export default {
         translateZ: 0,
         easing: "easeOutExpo",
         duration: 600,
-        delay: (el, i) => 30 * (i + 1),
+        delay: (el, i) => 27 * (i + 1),
       });
     },
     winWidth() {
       let windowWidth = window.innerWidth;
       if (windowWidth >= 992) {
-        this.fadeInJs;
+        this.fadeInJs();
       }
-    },
+    }
   },
   mounted() {
-    this.winWidth;
+    this.winWidth();
   },
 };
 </script>
@@ -57,18 +62,22 @@ export default {
 <style lang="scss">
 @import "~@/assets/scss/variables.scss";
 
-.site-intro{
+.site-intro {
   opacity: 0;
-  animation: fadeInRight .9s ease .3s forwards;
+  animation: fadeInRight 0.9s ease 0.3s forwards;
 }
 
 .ml1 {
   font-weight: 900;
 }
 
-.ml1 .letter {
+.letter {
   display: inline-block;
   line-height: 1em;
+
+  .letter-class {
+    transform: rotate(90deg);
+  }
 }
 
 @media (min-width: 992px) {
@@ -83,14 +92,21 @@ export default {
   .ml1 {
     font-size: 3.3rem;
   }
+
+  .letter {
+    transition: transform 0.6s ease;
+    &:hover {
+      transform: rotateY(180deg) !important ;
+    }
+  }
 }
 
 @keyframes fadeInRight {
-  0%{
+  0% {
     opacity: 0;
     transform: translateX(20%);
   }
-  100%{
+  100% {
     opacity: 1;
     transform: translateX(0%);
   }

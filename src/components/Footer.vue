@@ -119,6 +119,11 @@ footer {
 
   a {
     margin-right: 16px;
+    transition: transform 0.4s ease;
+
+    &:hover {
+      transform: rotate(8deg) scale(1.1);
+    }
   }
 }
 svg {

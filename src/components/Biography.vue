@@ -3,8 +3,8 @@
     <div class="biography-header">
       <h2>Biographie</h2>
       <p>
-        Cette introduction sera l'unique contenu de ma biographie , le reste
-        sera du texte aléatoire faute de matière nécessaire à la rédaction.
+        Titulaire d'une licence en informatique et d'un diplome dans le support
+        informatique, je me suis spécialisé dans le développement Front-end.
       </p>
     </div>
     <p>

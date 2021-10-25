@@ -38,7 +38,7 @@ export default {
 
       anime.timeline({ loop: false }).add({
         targets: ".ml1 .letter",
-        scale: [0.3, 1],
+        scale: [0.5, 1],
         opacity: [0, 1],
         translateZ: 0,
         easing: "easeOutExpo",

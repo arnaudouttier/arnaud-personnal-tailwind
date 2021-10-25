@@ -127,6 +127,16 @@ li {
   animation: fade-from-left 2s ease;
 }
 
+@media (min-width: 576px) {
+  .expertise-list {
+    ul {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      column-gap: 32px;
+    }
+  }
+}
+
 @media (min-width: 992px) {
   .expertise {
     display: grid;

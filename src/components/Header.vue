@@ -51,7 +51,7 @@ export default {
       if (windowWidth >= 992) {
         this.fadeInJs();
       }
-    }
+    },
   },
   mounted() {
     this.winWidth();
@@ -74,10 +74,6 @@ export default {
 .letter {
   display: inline-block;
   line-height: 1em;
-
-  .letter-class {
-    transform: rotate(90deg);
-  }
 }
 
 @media (min-width: 992px) {
@@ -95,6 +91,7 @@ export default {
 
   .letter {
     transition: transform 0.6s ease;
+
     &:hover {
       transform: rotateY(180deg) !important ;
     }

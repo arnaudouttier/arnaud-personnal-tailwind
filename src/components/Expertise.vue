@@ -127,17 +127,6 @@ li {
   animation: fade-from-left 2s ease;
 }
 
-@keyframes fade-from-left {
-  0% {
-    transform: translateX(-30px);
-    opacity: 0;
-  }
-  100% {
-    transform: translateX(0px);
-    opacity: 1;
-  }
-}
-
 @media (min-width: 992px) {
   .expertise {
     display: grid;
@@ -167,6 +156,17 @@ li {
       grid-template-columns: 1fr 1fr;
       column-gap: 32px;
     }
+  }
+}
+
+@keyframes fade-from-left {
+  0% {
+    transform: translateX(-30px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0px);
+    opacity: 1;
   }
 }
 </style>

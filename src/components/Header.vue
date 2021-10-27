@@ -2,19 +2,16 @@
   <header id="header" class="site-header">
     <Nav />
     <div class="site-intro">
-      <h1 class="ml1">
-        <span class="letters">
+      <h1 class="letters">
           Ce site est mon site personnel. Je m'appelle Arnaud Outtier -
           Développeur Web Junior - Support Informatique - Curieux et passionné
           par les technologies du web
-        </span>
       </h1>
     </div>
   </header>
 </template>
 
 <script>
-import anime from "animejs/lib/anime.es.js";
 import Nav from "./Nav.vue";
 
 export default {
@@ -22,34 +19,19 @@ export default {
   components: {
     Nav,
   },
-  data() {
-    return {
-      letterClass: "letter-class",
-    };
-  },
   methods: {
-    fadeInJs() {
+    splitLetters() {
       // Wrap every letter in a span
-      let textWrapper = document.querySelector(".ml1 .letters");
+      let textWrapper = document.querySelector(".letters");
       textWrapper.innerHTML = textWrapper.textContent.replace(
         /\S/g,
         "<span class='letter'>$&</span>"
       );
-
-      anime.timeline({ loop: false }).add({
-        targets: ".ml1 .letter",
-        scale: [0.5, 1],
-        opacity: [0, 1],
-        translateZ: 0,
-        easing: "easeOutExpo",
-        duration: 600,
-        delay: (el, i) => 27 * (i + 1),
-      });
     },
     winWidth() {
       let windowWidth = window.innerWidth;
       if (windowWidth >= 992) {
-        this.fadeInJs();
+        this.splitLetters();
       }
     },
   },
@@ -67,7 +49,7 @@ export default {
   animation: fadeInRight 0.9s ease 0.3s forwards;
 }
 
-.ml1 {
+.letters {
   font-weight: 900;
 }
 
@@ -85,7 +67,7 @@ export default {
     width: 80%;
   }
 
-  .ml1 {
+  .letters {
     font-size: 3.3rem;
   }
 

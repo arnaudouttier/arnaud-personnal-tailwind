@@ -28,6 +28,7 @@ export default {
   },
   mounted() {
     this.scrollGeneral();
+    this.random_bg_color();
   },
   methods: {
     scrollGeneral() {
@@ -58,12 +59,59 @@ export default {
         handleScrollAnimation();
       });
     },
+    random_bg_color() {
+      const body = document.querySelector("body");
+      const site = document.querySelector(".site");
+      const expertiseButton = document.querySelector(".expertise .button");
+      const svg = document.querySelectorAll("svg");
+
+      const getRandomNumber = (limit) => {
+        return Math.floor(Math.random() * limit);
+      };
+
+      const getRandomColor = () => {
+        const h = getRandomNumber(360);
+        const s = getRandomNumber(60);
+        const l = getRandomNumber(40);
+
+        return `hsl(${h}deg, ${s}%, ${l}%)`;
+      };
+
+      const setBackgroundColor = () => {
+        const randomColor = getRandomColor();
+        body.style.backgroundColor = randomColor;
+        site.style.color = randomColor;
+        expertiseButton.style.borderColor = randomColor;
+        for (let i = 0; i < svg.length; i++) {
+          svg[i].style.fill = randomColor;
+        }
+      };
+
+      // const setBcolorNavLink = () => {
+      //   const randomColor = getRandomColor();
+      //   const navLink = document.querySelectorAll(".navigation a");
+      //   for (let i = 0; i < navLink.length; i++) {
+      //     let navLinkAfter = window.getComputedStyle(navLink[i], ":after");
+      //     navLinkAfter.setProperty("background-color", randomColor);
+      //   }
+      // };
+
+      setBackgroundColor();
+
+      setInterval(() => {
+        setBackgroundColor();
+      }, 10000);
+    },
   },
 };
 </script>
 
 <style lang="scss">
 @import "./src/assets/scss/main.scss";
+body {
+  transition: background 1s;
+}
+
 .site {
   max-width: 992px;
   margin: 0 auto;

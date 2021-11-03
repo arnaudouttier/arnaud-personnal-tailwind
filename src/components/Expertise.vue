@@ -16,7 +16,6 @@
       <button class="button">
         résumé
         <svg
-          fill="#000000"
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 50 50"
           width="20px"
@@ -69,7 +68,8 @@ export default {
 
   &:before {
     content: "";
-    border-top: 2px solid $secondary-color;
+    border-top: 2px solid;
+    border-color: inherit;
     width: 50px;
     display: block;
     margin-bottom: 6rem;
@@ -97,7 +97,8 @@ li {
   align-items: center;
   width: 180px;
   height: 50px;
-  border: 1px solid $secondary-color;
+  border: 1px solid;
+  border-color: inherit;
   background-color: transparent;
   border-radius: 0%;
   cursor: pointer;
@@ -105,21 +106,10 @@ li {
   font-weight: 600;
   font-size: 1.15rem;
   margin: 64px 0;
-  transition: background-color 0.4s, color 0s, fill 0.5s;
-  transition-timing-function: ease-in-out;
+  color: inherit;
 
   svg {
     margin-left: 12px;
-  }
-
-  &:hover {
-    background-color: $secondary-color;
-    color: #fff;
-    border: 0;
-
-    svg {
-      fill: #fff;
-    }
   }
 }
 

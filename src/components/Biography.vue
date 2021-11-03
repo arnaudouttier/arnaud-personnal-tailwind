@@ -43,7 +43,8 @@ export default {
 
   &:before {
     content: "";
-    border-top: 2px solid $secondary-color;
+    border-top: 2px solid;
+    border-color: inherit;
     width: 50px;
     display: block;
     margin-bottom: 6rem;

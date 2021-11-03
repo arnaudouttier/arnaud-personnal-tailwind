@@ -39,7 +39,6 @@ export default {
       left: 0;
       width: 100%;
       height: 1px;
-      background-color: $secondary-color;
       transform-origin: right;
       transform: scaleX(0);
       transition: transform 0.3s ease-in-out;

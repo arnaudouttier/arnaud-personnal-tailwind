@@ -19,11 +19,11 @@ export default {
 
 .contact {
   font-family: $secondary-font;
-  color: #080808;
 
   &:before {
     content: "";
-    border-top: 2px solid $secondary-color;
+    border-top: 2px solid;
+    border-color: inherit;
     width: 50px;
     display: block;
     margin-bottom: 6rem;
@@ -36,7 +36,8 @@ export default {
 
     &:after {
       content: "";
-      border-bottom: 2px solid $secondary-color;
+      border-bottom: 2px solid;
+      border-color: inherit;
       position: absolute;
       left: 0;
       bottom: -4px;

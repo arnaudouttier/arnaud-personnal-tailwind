@@ -3,9 +3,9 @@
     <Nav />
     <div class="site-intro">
       <h1 class="letters">
-          Ce site est mon site personnel. Je m'appelle Arnaud Outtier -
-          Développeur Web Junior - Support Informatique - Curieux et passionné
-          par les technologies du web
+        Ce site est mon site personnel. Je m'appelle Arnaud Outtier -
+        Développeur Web Junior - Support Informatique - Curieux et passionné par
+        les technologies du web
       </h1>
     </div>
   </header>
@@ -21,7 +21,6 @@ export default {
   },
   methods: {
     splitLetters() {
-      // Wrap every letter in a span
       let textWrapper = document.querySelector(".letters");
       textWrapper.innerHTML = textWrapper.textContent.replace(
         /\S/g,
@@ -47,14 +46,14 @@ export default {
 .site-intro {
   opacity: 0;
   animation: fadeInRight 0.9s ease 0.3s forwards;
+  cursor: pointer;
 }
 
 .letters {
-  font-weight: 900;
+  font-weight: 700;
 }
 
 .letter {
-  display: inline-block;
   line-height: 1em;
 }
 
@@ -64,7 +63,7 @@ export default {
   }
 
   .site-intro {
-    width: 80%;
+    width: 60%;
   }
 
   .letters {
@@ -74,8 +73,18 @@ export default {
   .letter {
     transition: transform 0.6s ease;
 
-    &:hover {
-      transform: rotateY(180deg) !important ;
+    &:nth-child(even) {
+      &:hover {
+        display: inline-block;
+        transform: rotateY(180deg);
+      }
+    }
+
+    &:nth-child(odd) {
+      &:hover {
+        display: inline-block;
+        transform: rotateY(-180deg);
+      }
     }
   }
 }

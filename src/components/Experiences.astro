@@ -1,33 +1,39 @@
 ---
+const allExperiences = await Astro.glob("../content/experiences/*.md");
 ---
 
 <section class="experience">
   <h2>
-    <span>Work</span>
+    <span>Experiences</span>
   </h2>
+
   <ul>
-    <li>
-      <div class="group">
-        <img
-          width="40"
-          height="40"
-          decoding="async"
-          src="../../public/images/pistacheWeb.jpg"
-          alt=""
-        />
-      </div>
-      <div class="group">
-        <h3>Planetaria</h3>
-        <div class="details">
-          <h4>CEO</h4>
-          <div class="time-details">
-            <time datetime="2019">2019</time>
-            <span aria-hidden="true">—</span>
-            <time datetime="2023">Present</time>
+    {
+      allExperiences.map((experience) => (
+        <li>
+          <div class="group">
+            <img
+              width="40"
+              height="40"
+              decoding="async"
+              src="../assets/images/pistacheWeb.jpg"
+              alt="compagny image"
+            />
           </div>
-        </div>
-      </div>
-    </li>
+          <div class="group">
+            <h3>{experience.frontmatter.compagny}</h3>
+            <div class="details">
+              <h4>{experience.frontmatter.role}</h4>
+              <div class="time-details">
+                <time datetime="2019">{experience.frontmatter.startjob}</time>
+                <span aria-hidden="true">—</span>
+                <time datetime="2023">{experience.frontmatter.endjob}</time>
+              </div>
+            </div>
+          </div>
+        </li>
+      ))
+    }
   </ul>
 
   <a href="/#">Download CV</a>

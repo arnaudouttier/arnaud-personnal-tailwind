@@ -5,118 +5,63 @@
   <h2>
     <span>Work</span>
   </h2>
-  <ol>
+  <ul>
     <li>
-      <div>
+      <div class="group">
         <img
-          alt=""
-          loading="lazy"
-          width="32"
-          height="32"
+          width="40"
+          height="40"
           decoding="async"
-          data-nimg="1"
-          style="color:transparent"
-          src="/_next/static/media/planetaria.ecd81ade.svg"
-        />
-      </div><dl>
-        <dt>Company</dt><dd
-          class="w-full flex-none text-sm font-medium text-zinc-900 dark:text-zinc-100"
-        >
-          Planetaria
-        </dd><dt>Role</dt><dd>CEO</dd><dt>Date</dt><dd
-          aria-label="2019 until Present"
-        >
-          <time datetime="2019">2019</time>
-          <span aria-hidden="true">—</span>
-          <time datetime="2023">Present</time>
-        </dd>
-      </dl>
-    </li><li>
-      <div
-        class="relative mt-1 flex h-10 w-10 flex-none items-center justify-center rounded-full shadow-md shadow-zinc-800/5 ring-1 ring-zinc-900/5 dark:border dark:border-zinc-700/50 dark:bg-zinc-800 dark:ring-0"
-      >
-        <img
+          src="../../public/images/pistacheWeb.jpg"
           alt=""
-          loading="lazy"
-          width="28"
-          height="28"
-          decoding="async"
-          data-nimg="1"
-          style="color:transparent"
-          src="/_next/static/media/airbnb.b4000690.svg"
         />
-      </div><dl>
-        <dt>Company</dt><dd
-          class="w-full flex-none text-sm font-medium text-zinc-900 dark:text-zinc-100"
-        >
-          Airbnb
-        </dd><dt>Role</dt><dd>Product Designer</dd><dt>Date</dt><dd
-          aria-label="2014 until 2019"
-        >
-          <time datetime="2014">2014</time>
-          <span aria-hidden="true">—</span>
-          <time datetime="2019">2019</time>
-        </dd>
-      </dl>
-    </li><li>
-      <div
-        class="relative mt-1 flex h-10 w-10 flex-none items-center justify-center rounded-full shadow-md shadow-zinc-800/5 ring-1 ring-zinc-900/5 dark:border dark:border-zinc-700/50 dark:bg-zinc-800 dark:ring-0"
-      >
-        <img
-          alt=""
-          loading="lazy"
-          width="28"
-          height="28"
-          decoding="async"
-          data-nimg="1"
-          class="h-7 w-7"
-          style="color:transparent"
-          src="/_next/static/media/facebook.dd9e7d48.svg"
-        />
-      </div><dl>
-        <dt>Company</dt><dd
-          class="w-full flex-none text-sm font-medium text-zinc-900 dark:text-zinc-100"
-        >
-          Facebook
-        </dd><dt>Role</dt><dd>iOS Software Engineer</dd><dt>Date</dt><dd
-          aria-label="2011 until 2014"
-        >
-          <time datetime="2011">2011</time>
-          <span aria-hidden="true">—</span>
-          <time datetime="2014">2014</time>
-        </dd>
-      </dl>
-    </li><li>
-      <div
-        class="relative mt-1 flex h-10 w-10 flex-none items-center justify-center rounded-full shadow-md shadow-zinc-800/5 ring-1 ring-zinc-900/5 dark:border dark:border-zinc-700/50 dark:bg-zinc-800 dark:ring-0"
-      >
-        <img
-          alt=""
-          loading="lazy"
-          width="28"
-          height="28"
-          decoding="async"
-          data-nimg="1"
-          class="h-7 w-7"
-          style="color:transparent"
-          src="/_next/static/media/starbucks.4a5bd050.svg"
-        />
-      </div><dl>
-        <dt>Company</dt><dd
-          class="w-full flex-none text-sm font-medium text-zinc-900 dark:text-zinc-100"
-        >
-          Starbucks
-        </dd><dt>Role</dt><dd>Shift Supervisor</dd><dt>Date</dt><dd
-          aria-label="2008 until 2011"
-        >
-          <time datetime="2008">2008</time>
-          <span aria-hidden="true">—</span>
-          <time datetime="2011">2011</time>
-        </dd>
-      </dl>
+      </div>
+      <div class="group">
+        <h3>Planetaria</h3>
+        <div class="details">
+          <h4>CEO</h4>
+          <div class="time-details">
+            <time datetime="2019">2019</time>
+            <span aria-hidden="true">—</span>
+            <time datetime="2023">Present</time>
+          </div>
+        </div>
+      </div>
     </li>
-  </ol>
+  </ul>
+
   <a href="/#">Download CV</a>
 </section>
 
-<style></style>
+<style lang="scss">
+  ul {
+    list-style: none;
+  }
+
+  li {
+    display: flex;
+    align-items: center;
+    column-gap: 2rem;
+
+    > :nth-child(2) {
+      flex-grow: 1;
+
+      .details {
+        display: flex;
+        justify-content: space-between;
+      }
+    }
+  }
+
+  h3 {
+    margin-block: 0 1rem;
+  }
+
+  h4 {
+    margin: 0;
+  }
+
+  img {
+    border-radius: 100%;
+  }
+</style>

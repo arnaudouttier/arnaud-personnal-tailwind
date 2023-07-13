@@ -14,15 +14,20 @@ import heroData from "../content/gallery/hero-gallery.json";
   </ul>
 </section>
 
-<style>
+<style lang="scss">
   #gallery {
-    display: none;
-  }
-  #gallery ul {
-    display: grid;
-    grid-auto-flow: column;
-    grid-auto-columns: 300px;
-    padding: 0;
-    list-style: none;
+    max-width: min(90vw, 1200px);
+    margin-inline: auto;
+
+    ul {
+      display: grid;
+      grid-auto-flow: column;
+      grid-auto-columns: clamp(10.625rem, 13.333vw + 7.5rem, 17.5rem);
+      justify-content: center;
+      gap: 2rem;
+
+      padding: 0;
+      list-style: none;
+    }
   }
 </style>

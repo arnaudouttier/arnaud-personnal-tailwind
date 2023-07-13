@@ -1,9 +1,8 @@
 ---
 const allExperiences = await Astro.glob("../content/experiences/*.md");
-// import data from "../data/data.json";
 ---
 
-<section class="experience">
+<section id="experiences">
   <h2>
     <span>Experiences</span>
   </h2>
@@ -51,6 +50,11 @@ const allExperiences = await Astro.glob("../content/experiences/*.md");
     column-gap: 2rem;
     margin-block: 0 2rem;
 
+    > :nth-child(1) {
+      width: 40px;
+      height: 40px;
+    }
+
     > :nth-child(2) {
       flex-grow: 1;
 
@@ -71,5 +75,6 @@ const allExperiences = await Astro.glob("../content/experiences/*.md");
 
   img {
     border-radius: 100%;
+    height: inherit;
   }
 </style>

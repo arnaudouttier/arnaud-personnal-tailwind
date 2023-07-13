@@ -2,30 +2,25 @@
 import Layout from "../layouts/Layout.astro";
 import Card from "../components/Card.astro";
 import Hero from "../components/Hero.astro";
+import Gallery from "../components/Gallery.astro";
 import Newsletter from "../components/Newsletter.astro";
 import Experiences from "../components/Experiences.astro";
 import Footer from "../components/Footer.astro";
 ---
 
-<Layout title="Welcome to Astro.">
-  <main>
+<Layout title="Welcome You">
+  <aside>
     <Hero />
-
-    <ul role="list" class="link-card-grid">
-      <Card
-        href="https://docs.astro.build/"
-        title="Documentation"
-        body="Learn how Astro works and explore the official API docs."
-      />
-      <Card
-        href="https://astro.build/integrations/"
-        title="Integrations"
-        body="Supercharge your project with new frameworks and libraries."
-      />
-    </ul>
-
-    <Newsletter />
-    <Experiences />
+    <Gallery />
+  </aside>
+  <main>
+    <div>
+      <Card />
+    </div>
+    <div class="group">
+      <Newsletter />
+      <Experiences />
+    </div>
   </main>
 
   <Footer />
@@ -33,14 +28,19 @@ import Footer from "../components/Footer.astro";
 
 <style>
   main {
-    margin: auto;
     width: min(1200px, 90vw);
+    margin-inline: auto;
+
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 3rem;
   }
 
-  .link-card-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
-    gap: 1rem;
-    padding: 0;
+  @media (min-width: 1024px) {
+    main {
+      > :nth-child(2) {
+        padding-inline: clamp(4rem, 5vw + 3rem, 8rem) 0;
+      }
+    }
   }
 </style>

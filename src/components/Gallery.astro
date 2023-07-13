@@ -1,0 +1,28 @@
+---
+import heroData from "../content/gallery/hero-gallery.json";
+---
+
+<section id="gallery">
+  <ul>
+    {
+      heroData.map((heroImgUrl) => (
+        <li>
+          <img src={heroImgUrl.heroImageUrl} alt="hero gallery image" />
+        </li>
+      ))
+    }
+  </ul>
+</section>
+
+<style>
+  #gallery {
+    display: none;
+  }
+  #gallery ul {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: 300px;
+    padding: 0;
+    list-style: none;
+  }
+</style>

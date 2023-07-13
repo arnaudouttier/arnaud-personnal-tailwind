@@ -1,5 +1,6 @@
 ---
 const allExperiences = await Astro.glob("../content/experiences/*.md");
+// import data from "../data/data.json";
 ---
 
 <section class="experience">
@@ -16,7 +17,7 @@ const allExperiences = await Astro.glob("../content/experiences/*.md");
               width="40"
               height="40"
               decoding="async"
-              src="../assets/images/pistacheWeb.jpg"
+              src={experience.frontmatter.compagnyimage}
               alt="compagny image"
             />
           </div>
@@ -48,6 +49,7 @@ const allExperiences = await Astro.glob("../content/experiences/*.md");
     display: flex;
     align-items: center;
     column-gap: 2rem;
+    margin-block: 0 2rem;
 
     > :nth-child(2) {
       flex-grow: 1;

@@ -6,7 +6,6 @@ const allExperiences = await Astro.glob("../content/experiences/*.md");
   <h2>
     <span>Experiences</span>
   </h2>
-
   <ul>
     {
       allExperiences.map((experience) => (
@@ -35,7 +34,6 @@ const allExperiences = await Astro.glob("../content/experiences/*.md");
       ))
     }
   </ul>
-
   <a href="/#">Download CV</a>
 </section>
 
@@ -53,6 +51,10 @@ const allExperiences = await Astro.glob("../content/experiences/*.md");
     > :nth-child(1) {
       width: 40px;
       height: 40px;
+      border-radius: 100%;
+      overflow: hidden;
+
+      flex-shrink: 0;
     }
 
     > :nth-child(2) {
@@ -74,7 +76,6 @@ const allExperiences = await Astro.glob("../content/experiences/*.md");
   }
 
   img {
-    border-radius: 100%;
     height: inherit;
   }
 </style>

@@ -13,7 +13,7 @@ import Footer from "../components/Footer.astro";
     <Hero />
     <Gallery />
   </aside>
-  <main>
+  <main id="main">
     <div>
       <Card />
     </div>
@@ -22,12 +22,11 @@ import Footer from "../components/Footer.astro";
       <Experiences />
     </div>
   </main>
-
   <Footer />
 </Layout>
 
 <style>
-  main {
+  #main {
     width: min(1200px, 90vw);
     margin-inline: auto;
 
@@ -37,7 +36,7 @@ import Footer from "../components/Footer.astro";
   }
 
   @media (min-width: 1024px) {
-    main {
+    #main {
       > :nth-child(2) {
         padding-inline: clamp(4rem, 5vw + 3rem, 8rem) 0;
       }

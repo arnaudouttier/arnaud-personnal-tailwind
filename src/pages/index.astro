@@ -33,6 +33,16 @@ import Footer from "../components/Footer.astro";
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
     gap: 3rem;
+
+    > :nth-child(1) {
+      display: grid;
+      row-gap: 5rem;
+    }
+
+    > :nth-child(2) {
+      display: grid;
+      row-gap: 3rem;
+    }
   }
 
   @media (min-width: 1024px) {

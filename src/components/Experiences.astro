@@ -49,10 +49,13 @@ const allExperiences = await Astro.glob("../content/experiences/*.md");
     margin-block: 0 2rem;
 
     > :nth-child(1) {
-      width: 40px;
-      height: 40px;
+      width: 28px;
+      height: 28px;
       border-radius: 100%;
       overflow: hidden;
+      border: 5px solid #fff;
+      outline: 0.05rem solid rgb(229, 231, 235);
+      box-shadow: rgb(255, 255, 255) 0px 0px 0px;
 
       flex-shrink: 0;
     }
@@ -67,15 +70,21 @@ const allExperiences = await Astro.glob("../content/experiences/*.md");
     }
   }
 
+  img {
+    height: inherit;
+  }
+
   h3 {
+    font-size: 0.875rem;
     margin-block: 0 1rem;
   }
 
   h4 {
+    font-size: 0.8125rem;
     margin: 0;
   }
 
-  img {
-    height: inherit;
+  .time-details {
+    font-size: 0.8125rem;
   }
 </style>

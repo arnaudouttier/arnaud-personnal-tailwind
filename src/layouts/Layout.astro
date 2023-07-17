@@ -66,23 +66,34 @@ const { title } = Astro.props;
     color: inherit;
     border: 0;
     background-color: transparent;
+    font-size: 0.875rem;
+    line-height: 1.5;
+    text-align: center;
+    border-radius: 0.375rem;
+    transition: all 0.4s ease;
   }
 
   .btn-primary {
-    font-size: 0.875rem;
-    line-height: 1.5;
     padding-block: 1rem;
-    font-weight: 500;
-    text-align: center;
+
     background-color: rgb(244, 244, 245);
-    width: 100%;
-    border-radius: 0.375rem;
-    margin-top: 1.5rem;
-    transition: all 0.4s ease;
+    font-weight: 500;
 
     &:hover {
       background-color: rgb(229, 231, 235);
       color: rgb(20, 184, 166);
+    }
+  }
+
+  .btn-secondary {
+    padding: 0.5rem;
+
+    font-weight: 600;
+    background-color: var(--clr_primary);
+    color: #fff;
+
+    &:hover {
+      opacity: 0.9;
     }
   }
 </style>

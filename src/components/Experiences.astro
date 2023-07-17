@@ -52,7 +52,7 @@ const allExperiences = await Astro.glob("../content/experiences/*.md");
   }
 
   h2 {
-    color: rgb(24, 24, 27);
+    color: var(--clr_primary);
     font-size: 0.875rem;
     line-height: 1.5rem;
   }
@@ -97,6 +97,8 @@ const allExperiences = await Astro.glob("../content/experiences/*.md");
   h3 {
     font-size: 0.875rem;
     margin-block: 0 1rem;
+    color: var(--clr_primary);
+    font-weight: 400;
   }
 
   h4,

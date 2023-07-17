@@ -5,6 +5,7 @@ import Hero from "../components/Hero.astro";
 import Gallery from "../components/Gallery.astro";
 import Newsletter from "../components/Newsletter.astro";
 import Experiences from "../components/Experiences.astro";
+import Skills from "../components/Skills.astro";
 import Footer from "../components/Footer.astro";
 ---
 
@@ -20,6 +21,7 @@ import Footer from "../components/Footer.astro";
     <div class="group">
       <Newsletter />
       <Experiences />
+      <Skills />
     </div>
   </main>
   <Footer />
@@ -35,7 +37,8 @@ import Footer from "../components/Footer.astro";
     gap: 3rem;
 
     > :nth-child(1) {
-      display: grid;
+      display: flex;
+      flex-direction: column;
       row-gap: 4rem;
     }
 

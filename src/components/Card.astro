@@ -5,19 +5,6 @@
   <time datetime="2022-09-05">
     <span aria-hidden="true"></span>September 5, 2022
   </time>
-  <h2>Crafting a design system for a multiplanetary future</h2>
-  <p>
-    Most companies try to stay ahead of the curve when it comes to visual
-    design, but for Planetaria we needed to create a brand that would still
-    inspire us 100 years from now when humanity has spread across our entire
-    solar system.
-  </p>
-  <a class="read-more" aria-hidden="true">Read article</a>
-</article>
-<article>
-  <time datetime="2022-09-05">
-    <span aria-hidden="true"></span>September 5, 2022
-  </time>
   <h2>
     <a href="/articles/crafting-a-design-system-for-a-multiplanetary-future">
       <span>Crafting a design system for a multiplanetary future</span>
@@ -29,24 +16,16 @@
     inspire us 100 years from now when humanity has spread across our entire
     solar system.
   </p>
-  <a class="read-more" aria-hidden="true">Read article</a>
-</article>
-<article>
-  <time datetime="2022-09-05">
-    <span aria-hidden="true"></span>September 5, 2022
-  </time>
-  <h2>
-    <a href="/articles/crafting-a-design-system-for-a-multiplanetary-future">
-      <span>Crafting a design system for a multiplanetary future</span>
-    </a>
-  </h2>
-  <p>
-    Most companies try to stay ahead of the curve when it comes to visual
-    design, but for Planetaria we needed to create a brand that would still
-    inspire us 100 years from now when humanity has spread across our entire
-    solar system.
-  </p>
-  <a class="read-more" aria-hidden="true">Read article</a>
+  <div class="card-link">
+    <a class="read-more" aria-hidden="true">Read article</a>
+    <img
+      width="16"
+      height="16"
+      class="link-icon-arrow"
+      src="/icons/icon-arrow-16.png"
+      alt="icon arrow"
+    />
+  </div>
 </article>
 
 <style lang="scss">
@@ -77,17 +56,32 @@
       color: var(--clr_primary);
       font-size: 1rem;
       letter-spacing: -0.025em;
+    }
+
+    p {
+      color: rgb(82, 82, 91);
+      font-size: 0.875rem;
+      line-height: 1.5rem;
+    }
+
+    .card-link {
+      width: fit-content;
+
+      display: flex;
+      align-items: center;
+      column-gap: 0.5rem;
+
       position: relative;
       cursor: pointer;
 
       &::after {
         content: "";
         position: absolute;
-        bottom: -4px;
+        bottom: 2px;
         left: 0;
         width: 100%;
-        height: 2px;
-        background-color: var(--clr_primary);
+        height: 1px;
+        background-color: rgb(20, 184, 166);
         opacity: 0;
         transition: opacity 0.2s ease;
       }
@@ -99,14 +93,12 @@
       }
     }
 
-    p {
-      color: rgb(82, 82, 91);
-      font-size: 0.875rem;
-      line-height: 1.5rem;
-    }
-
     a.read-more {
       color: rgb(20, 184, 166);
+    }
+
+    .link-icon-arrow {
+      transform: rotate(-90deg);
     }
   }
 </style>

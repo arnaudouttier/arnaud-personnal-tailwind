@@ -82,11 +82,13 @@ const allEducation = await Astro.glob("../content/education/*.md");
 
     > :nth-child(2) {
       flex-grow: 1;
+    }
 
-      .details {
-        display: flex;
-        justify-content: space-between;
-      }
+    .details {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      row-gap: 0.875rem;
     }
   }
 
@@ -99,6 +101,9 @@ const allEducation = await Astro.glob("../content/education/*.md");
     margin-block: 0 1rem;
     color: var(--clr_primary);
     font-weight: 400;
+  }
+
+  .details {
   }
 
   h4,

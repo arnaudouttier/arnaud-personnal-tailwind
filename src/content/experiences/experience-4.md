@@ -1,9 +1,12 @@
 ---
 
-compagny : Université de Lille
-role : Support informatique
-startjob : Jan 2022
-endjob : Aout 2022
+compagny : la bonne agence
+role : Intégrateur web
+startMonthjob : Juillet 
+endMonthjob : Septembre
+yearJob : 2022
 compagnyimage : /images/pistacheWeb.jpg
+compagnyLink : www.labonneagence.fr
+description : Intégration des maquettes Figma pour le site du théatre MC2 à Grenoble pour l’agence la bonne agence. Intégration en version mobile et desktop.
 
 ---

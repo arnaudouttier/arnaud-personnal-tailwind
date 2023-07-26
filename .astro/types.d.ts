@@ -189,27 +189,6 @@ declare module 'astro:content' {
 
 	type ContentEntryMap = {
 		"education": {
-"education-1.md": {
-	id: "education-1.md";
-  slug: "education-1";
-  body: string;
-  collection: "education";
-  data: any
-} & { render(): Render[".md"] };
-"education-2.md": {
-	id: "education-2.md";
-  slug: "education-2";
-  body: string;
-  collection: "education";
-  data: any
-} & { render(): Render[".md"] };
-"education-3.md": {
-	id: "education-3.md";
-  slug: "education-3";
-  body: string;
-  collection: "education";
-  data: any
-} & { render(): Render[".md"] };
 };
 "experiences": {
 "experience-1.md": {
@@ -242,26 +221,12 @@ declare module 'astro:content' {
 } & { render(): Render[".md"] };
 };
 "skills": {
-"education-1.md": {
-	id: "education-1.md";
-  slug: "education-1";
-  body: string;
-  collection: "skills";
-  data: any
-} & { render(): Render[".md"] };
 };
 
 	};
 
 	type DataEntryMap = {
-		"gallery": {
-"hero-gallery": {
-	id: "hero-gallery";
-  collection: "gallery";
-  data: any
-};
-};
-
+		
 	};
 
 	type AnyEntryMap = ContentEntryMap & DataEntryMap;
